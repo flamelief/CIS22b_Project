@@ -66,6 +66,7 @@
   <ItemGroup>
     <ClCompile Include="Book.cpp" />
     <ClCompile Include="Date.cpp" />
+    <ClCompile Include="Interface.cpp" />
     <ClCompile Include="Price.cpp" />
     <ClCompile Include="Report.cpp" />
   </ItemGroup>
@@ -73,6 +74,7 @@
     <ClInclude Include="Book.h" />
     <ClInclude Include="Date.h" />
     <ClInclude Include="globals.h" />
+    <ClInclude Include="Interface.h" />
     <ClInclude Include="Price.h" />
     <ClInclude Include="Report.h" />
   </ItemGroup>

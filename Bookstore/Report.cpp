@@ -3,7 +3,10 @@
 
 Report::Report()
 {
+	file.seekg(ios_base::beg);
 }
+
+
 
 
 Report::~Report()

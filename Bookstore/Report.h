@@ -1,16 +1,13 @@
 #pragma once
 #include <vector>
+#include <fstream>
 #include "Book.h"
+#include "Interface.h"
 
 using namespace std;
 
-class Report
+class Report: Interface{
 	vector<Book*> books;
-public:
-	int cmpWholesale(Book b1, Book2);
-
-	sort(vector<Book*>)
-{
 public:
 	Report();
 	~Report();
