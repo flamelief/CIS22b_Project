@@ -68,6 +68,7 @@
     <ClCompile Include="Date.cpp" />
     <ClCompile Include="driver.cpp" />
     <ClCompile Include="Interface.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="Price.cpp" />
     <ClCompile Include="Report.cpp" />
   </ItemGroup>
