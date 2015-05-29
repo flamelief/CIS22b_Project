@@ -1,13 +1,13 @@
 #pragma once
 #include <vector>
-#include <fstream>
+#include <algorithm>
 #include "Book.h"
 #include "Interface.h"
 
 using namespace std;
 
 class Report: Interface{
-	vector<Book*> books;
+	vector<Book> books;
 public:
 	Report();
 	~Report();

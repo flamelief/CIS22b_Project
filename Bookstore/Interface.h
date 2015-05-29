@@ -5,11 +5,12 @@ using namespace std;
 
 class Interface
 {
-protected:
-	static fstream file;
-
 public:
+
+	static fstream *file;
 	Interface();
+	Interface(fstream *fs);
 	~Interface();
+protected:
 };
 

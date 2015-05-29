@@ -15,14 +15,13 @@ using namespace std;
 
 class Book {
 private:
-	uint ISBN;
-	string title, author, publisher;
+	string ISBN, title, author, publisher;
 	Price wholesale, retail;
 	Date dateAdded;
 	int quantity;
 public:
-	void setISBN(uint ISBN);
-	uint getISBN();
+	void setISBN(string ISBN);
+	string getISBN();
 
 	void setTitle(string title);
 	string getTitle();
@@ -44,6 +43,10 @@ public:
 
 	void setDate(Date dateAdded);
 	Date getDate();
+
+	friend istream& operator>>(istream &input, Book &B);
+	friend ostream& operator<<(ostream &output, const Book &B);
+
 };
 
 #endif //BOOKSTORE_BOOK_H

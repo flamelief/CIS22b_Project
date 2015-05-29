@@ -66,6 +66,7 @@
   <ItemGroup>
     <ClCompile Include="Book.cpp" />
     <ClCompile Include="Date.cpp" />
+    <ClCompile Include="driver.cpp" />
     <ClCompile Include="Interface.cpp" />
     <ClCompile Include="Price.cpp" />
     <ClCompile Include="Report.cpp" />
@@ -77,6 +78,9 @@
     <ClInclude Include="Interface.h" />
     <ClInclude Include="Price.h" />
     <ClInclude Include="Report.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="books.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
