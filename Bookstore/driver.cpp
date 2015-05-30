@@ -1,3 +1,4 @@
+#ifdef DRIVER
 #include <iostream>
 #include "Report.h"
 
@@ -9,3 +10,4 @@ int main(){
 	Report r;
 	return 0;
 }
+#endif //DRIVER

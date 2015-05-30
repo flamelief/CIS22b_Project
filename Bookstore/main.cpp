@@ -1,3 +1,4 @@
+#ifdef DEBUG 
 #include <iostream>
 #include <string>
 
@@ -34,3 +35,4 @@ int main()
 		system("pause");
 	}
 }
+#endif //DEBUG

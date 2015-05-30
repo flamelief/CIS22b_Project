@@ -58,6 +58,8 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="books.txt" />
+    <Text Include="books.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>

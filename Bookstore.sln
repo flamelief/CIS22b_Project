@@ -8,11 +8,14 @@ EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
+		Driver|Win32 = Driver|Win32
 		Release|Win32 = Release|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{245FABFA-5BCB-46AC-91CF-2BBA4E15A393}.Debug|Win32.ActiveCfg = Debug|Win32
 		{245FABFA-5BCB-46AC-91CF-2BBA4E15A393}.Debug|Win32.Build.0 = Debug|Win32
+		{245FABFA-5BCB-46AC-91CF-2BBA4E15A393}.Driver|Win32.ActiveCfg = Driver|Win32
+		{245FABFA-5BCB-46AC-91CF-2BBA4E15A393}.Driver|Win32.Build.0 = Driver|Win32
 		{245FABFA-5BCB-46AC-91CF-2BBA4E15A393}.Release|Win32.ActiveCfg = Release|Win32
 		{245FABFA-5BCB-46AC-91CF-2BBA4E15A393}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
