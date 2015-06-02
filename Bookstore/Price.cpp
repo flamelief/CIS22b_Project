@@ -46,4 +46,11 @@ bool Price::isValid(){
 	return total_cents >= 0;
 }
 
+/*Price Price::operator * (const double &right)
+{
+	// Return a multiplication between a Price object and a double as Price
+	total_cents = total_cents * right;
+	return *this;
+}
+*/
 
