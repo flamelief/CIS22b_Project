@@ -93,15 +93,17 @@
     <ClCompile Include="Date.cpp" />
     <ClCompile Include="driver.cpp" />
     <ClCompile Include="Interface.cpp" />
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="mainMenu.cpp" />
     <ClCompile Include="Price.cpp" />
     <ClCompile Include="Report.cpp" />
+    <ClCompile Include="Cashier.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Book.h" />
     <ClInclude Include="Cashier.h" />
     <ClInclude Include="Date.h" />
     <ClInclude Include="globals.h" />
+    <ClInclude Include="Cashier.h" />
     <ClInclude Include="Interface.h" />
     <ClInclude Include="Price.h" />
     <ClInclude Include="Report.h" />

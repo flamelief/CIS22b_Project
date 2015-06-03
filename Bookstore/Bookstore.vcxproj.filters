@@ -33,7 +33,10 @@
     <ClCompile Include="Report.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="mainMenu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Cashier.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

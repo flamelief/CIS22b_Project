@@ -46,4 +46,26 @@ bool Price::isValid(){
 	return total_cents >= 0;
 }
 
+Price operator * (const Price& left, const double &right)
+{
+	// Return a multiplication between a Price object and a double as Price
+	Price temp;
+	temp.total_cents = left.total_cents * right;
+	return temp;
+}
+
+Price operator * (const double& left, const Price &right)
+{
+	Price temp;
+	temp.total_cents = left * right.total_cents;
+	return temp;
+}
+
+Price operator + (const Price &left, const Price &right)
+{
+	Price temp;
+	temp.total_cents = left.total_cents + right.total_cents;
+	return temp;
+}
+
 
