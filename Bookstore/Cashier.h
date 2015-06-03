@@ -4,7 +4,7 @@
 #define CASHIER_H
 
 #include "Book.h"
-
+fdlhgldkfg
 const double TAX = 0.925;
 
 class Cashier
