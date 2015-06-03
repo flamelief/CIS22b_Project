@@ -21,7 +21,9 @@ public:
 	inline int getCents() const;
 	void setPrice(int dollars, int cents);
 	inline bool isValid();
-	//Price operator*(const double &);
+	friend Price operator*(const Price &, const double &);
+	friend Price operator*(const double &, const Price &);
+	friend Price operator+(const Price &, const Price &);
 };
 
 
