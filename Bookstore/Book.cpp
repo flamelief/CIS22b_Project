@@ -56,6 +56,6 @@ ostream& operator<<(ostream &output, const Book &B){
 	output << "Date Added: " << B.dateAdded << endl;
 	output << "Quantity On Hand: " << B.quantity << endl;
 	output << "Wholesale Cost: " << B.wholesale << endl;
-	output << "Retail Cost: " << B.retail << endl;
+	output << "Retail Cost: " << B.retail;
 	return output;
 }

@@ -7,9 +7,10 @@
 using namespace std;
 
 class Report: Interface{
-	vector<Book> books;
+	vector<Book*> books;
 public:
 	Report();
 	~Report();
+	void printInventory();
 };
 

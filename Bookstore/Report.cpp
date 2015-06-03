@@ -3,19 +3,22 @@
 
 Report::Report()
 {
-	books.resize(100);
-	Book b;
+//	books.resize(100);
 	if (*file){
-		for (int i = 0; file->good(); i++){
-			*file >> books.at(i);
+		while(file->good()){
+			Book *temp = new Book();
+			*file >> *temp;
+			books.push_back(temp);
 		}
 	}
 }
 
-
-
-
 Report::~Report()
 {
+	for_each(books.begin(), books.end(), [](const Book *b){ delete b; });
+}
+
+void Report::printInventory(){
+	for_each(books.begin(), books.end(), [](const Book *b){ cout << *b << endl; });
 }
 
