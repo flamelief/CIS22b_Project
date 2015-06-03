@@ -57,7 +57,7 @@ Price operator * (const Price& left, const double &right)
 Price operator * (const double& left, const Price &right)
 {
 	Price temp;
-	temp.total_cents = right.total_cents * left;
+	temp.total_cents = left * right.total_cents;
 	return temp;
 }
 

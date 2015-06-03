@@ -4,7 +4,7 @@
 
 using namespace std;
 
-void removeBook(Book b)
+void decrementBook(/*pointer to book array from inventory*/)
 {
 	// lower quantity of bought book by 1
 	// possibly use static int
