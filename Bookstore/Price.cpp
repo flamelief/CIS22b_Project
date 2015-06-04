@@ -1,9 +1,7 @@
 //
 // Created by Brandon Yost on 5/9/15.
 //
-#ifndef BOOKSTORE_PRICE_H
 #include "Price.h"
-#endif
 
 Price::Price(){
 	total_cents = 0;
@@ -21,6 +19,8 @@ ostream& operator<<(ostream &output, const Price &P){
 
 istream& operator>>(istream &input, Price &P){
 	double price;
+	// Possibly prompt the user to enter price
+	// cout << "Please enter a price: ";
 	input >> price;
 	P.total_cents = static_cast<int>(floor(price * 100));
 	if (!(input && P.isValid())) {

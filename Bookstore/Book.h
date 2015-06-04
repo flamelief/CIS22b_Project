@@ -8,10 +8,13 @@
 #include "globals.h"
 #include "Price.h"
 #include "Date.h"
+#include "Cashier.h"
 
 #include <string>
 
 using namespace std;
+
+class Cashier;
 
 class Book {
 private:
@@ -47,6 +50,7 @@ public:
 	friend istream& operator>>(istream &input, Book &B);
 	friend ostream& operator<<(ostream &output, const Book &B);
 
+	friend void Cashier::decrementBookQuant(Book &);
 };
 
 #endif //BOOKSTORE_BOOK_H

@@ -4,9 +4,15 @@
 
 using namespace std;
 
-void decrementBook(/*pointer to book array from inventory*/)
+void Cashier::decrementBookQuant(Book &b)
 {
-	// lower quantity of bought book by 1
-	// possibly use static int
+	// Lower quantity of bought book by 1
 	// Can go to 0 but not negative
+	if (b.getQuant() <= 0)
+	{
+		cout << "This book does not exist in our database and cannot be purchased." << endl;
+		return;
+	}
+
+	--b.quantity; // make accessible 
 }
