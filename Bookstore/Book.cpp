@@ -4,6 +4,8 @@
 
 #include "Book.h"
 
+
+
 void Book::setISBN(string ISBN) { this->ISBN = ISBN; }
 string Book::getISBN() { return ISBN; }
 
@@ -23,7 +25,7 @@ void Book::setRetail(Price retail) { this->retail = retail; }
 Price Book::getRetail() { return retail; }
 
 void Book::setQuant(int quantity) { this->quantity = quantity; }
-int Book::getQuant() { return quantity; }
+int Book::getQuant() const { return quantity; }
 
 void Book::setDate(Date d) { dateAdded = d; }
 Date Book::getDate() { return dateAdded; }
@@ -59,3 +61,5 @@ ostream& operator<<(ostream &output, const Book &B){
 	output << "Retail Cost: " << B.retail;
 	return output;
 }
+
+//bool compQuant(const Book *b1, const Book *b2) { return b1->getQuant() > b2->getQuant(); }

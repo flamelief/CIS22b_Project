@@ -44,13 +44,16 @@ public:
 	Price getRetail();
 
 	void setQuant(int quantity);
-	int getQuant();
+	int getQuant() const;
 
 	void setDate(Date dateAdded);
 	Date getDate();
 
 	friend istream& operator>>(istream &input, Book &B);
 	friend ostream& operator<<(ostream &output, const Book &B);
+
+
+	static bool compQuant(const Book *b1, const Book *b2) { return b1->getQuant() > b2->getQuant(); }
 	
 	#ifndef REPORT_DRIVER
 	friend void Cashier::decrementBookQuant(Book &);

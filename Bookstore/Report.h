@@ -4,19 +4,18 @@
 #include "Book.h"
 #include "Interface.h"
 
-using namespace std;
+class Book;
 
 class Report: Interface{
-	vector<Book*> books;
+	std::vector<Book*> books;
+	bool (*Report::compare)(const Book*, const Book*);
 public:
 	Report();
 	~Report();
 	void printInventory();
-	bool compQuant(Book *b1, Book *b2);
-	
-	void sortR(bool (Book*, Book*));
-
-//	Book* end();
-
+	void setCompare();// Compare);
+	bool (*Report::getCompare())(const Book*, const Book*);
+	static bool compQuant(const Book *b1, const Book *b2);
+	void sort();
 };
 
