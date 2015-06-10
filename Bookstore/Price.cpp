@@ -46,7 +46,7 @@ bool Price::isValid(){
 	return total_cents >= 0;
 }
 
-bool operator<(Price p1, Price p2)
+bool operator<(const Price &p1, const Price &p2)
 {
 	return p1.total_cents< p2.total_cents; 
 }
