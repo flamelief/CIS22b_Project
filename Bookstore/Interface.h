@@ -7,10 +7,10 @@ class Interface
 {
 public:
 
-	static fstream *file;
 	Interface();
 	Interface(fstream *fs);
 	~Interface();
 protected:
+	static fstream *file;
 };
 

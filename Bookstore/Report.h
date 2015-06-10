@@ -4,17 +4,23 @@
 #include "Book.h"
 #include "Interface.h"
 
-enum Sort { Unsorted, Quantity, Date, Retail, Wholesale };
+/*
+	Constructor creates vector of Books from Inventory file.
+	Only exposed method is setMode which takes the operation the
+	user wants and prints the results. If setMode argument is the same as
+	mode, the result will be printed but no other operation will occur (i.e. sorting).
+*/
+enum Sort { Unsorted, Quantity, Date, Retail, Wholesale, RetailList, WholesaleList };
 
 class Report: Interface{
 	std::vector<Book> books;
 	Sort mode;
 	template <typename fT>
 	void sort(fT get);
+	void printInventory(Price(Book::*)() const);
 public:
 	Report();
 	~Report();
-	void printInventory();
 	void setMode(Sort mode);
 };
 
