@@ -46,6 +46,11 @@ bool Price::isValid(){
 	return total_cents >= 0;
 }
 
+bool operator<(Price p1, Price p2)
+{
+	return p1.total_cents< p2.total_cents; 
+}
+
 Price operator * (const Price& left, const double &right)
 {
 	// Return a multiplication between a Price object and a double as Price
