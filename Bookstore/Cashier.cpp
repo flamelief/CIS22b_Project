@@ -1,3 +1,4 @@
+#ifndef REPORT_DRIVER
 // Implementation for Cashier
 
 #include "Cashier.h"
@@ -16,3 +17,4 @@ void Cashier::decrementBookQuant(Book &b)
 
 	--b.quantity; // make accessible 
 }
+#endif //REPORT_DRIVER

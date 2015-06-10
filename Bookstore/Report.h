@@ -12,5 +12,11 @@ public:
 	Report();
 	~Report();
 	void printInventory();
+	bool compQuant(Book *b1, Book *b2);
+	
+	void sortR(bool (Book*, Book*));
+
+//	Book* end();
+
 };
 

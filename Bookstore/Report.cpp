@@ -22,3 +22,7 @@ void Report::printInventory(){
 	for_each(books.begin(), books.end(), [](const Book *b){ cout << *b << endl; });
 }
 
+bool Report::compQuant(Book *b1, Book *b2) { return b1->getQuant() > b2->getQuant(); }
+
+void Report::sortR(bool f(Book *b1, Book *b2)) { std::sort(books.begin(), books.end(), f); }
+

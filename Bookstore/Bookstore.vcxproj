@@ -5,8 +5,8 @@
       <Configuration>Debug</Configuration>
       <Platform>Win32</Platform>
     </ProjectConfiguration>
-    <ProjectConfiguration Include="Driver|Win32">
-      <Configuration>Driver</Configuration>
+    <ProjectConfiguration Include="Report_Driver|Win32">
+      <Configuration>Report_Driver</Configuration>
       <Platform>Win32</Platform>
     </ProjectConfiguration>
     <ProjectConfiguration Include="Release|Win32">
@@ -25,7 +25,7 @@
     <PlatformToolset>v120</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Driver|Win32'" Label="Configuration">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Report_Driver|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v120</PlatformToolset>
@@ -44,7 +44,7 @@
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Driver|Win32'" Label="PropertySheets">
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Report_Driver|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -63,12 +63,12 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Driver|Win32'">
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Report_Driver|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>DRIVER;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>REPORT_DRIVER;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -91,9 +91,8 @@
   <ItemGroup>
     <ClCompile Include="Book.cpp" />
     <ClCompile Include="Date.cpp" />
-    <ClCompile Include="driver.cpp" />
+    <ClCompile Include="ReportDriver.cpp" />
     <ClCompile Include="Interface.cpp" />
-    <ClCompile Include="Inventory.cpp" />
     <ClCompile Include="mainMenu.cpp" />
     <ClCompile Include="Price.cpp" />
     <ClCompile Include="Report.cpp" />

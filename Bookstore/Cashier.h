@@ -1,5 +1,5 @@
 // Specification File for Cashier Class
-
+#ifndef REPORT_DRIVER
 #ifndef CASHIER_H
 #define CASHIER_H
 
@@ -20,3 +20,4 @@ public:
 	void decrementBookQuant(Book&);
 };
 #endif
+#endif //REPORT_DRIVER

@@ -8,7 +8,9 @@
 #include "globals.h"
 #include "Price.h"
 #include "Date.h"
+#ifndef REPORT_DRIVER
 #include "Cashier.h"
+#endif //REPORT_MODULE
 
 #include <string>
 
@@ -49,8 +51,10 @@ public:
 
 	friend istream& operator>>(istream &input, Book &B);
 	friend ostream& operator<<(ostream &output, const Book &B);
-
+	
+	#ifndef REPORT_DRIVER
 	friend void Cashier::decrementBookQuant(Book &);
+	#endif //REPORT_DRIVER
 };
 
 #endif //BOOKSTORE_BOOK_H

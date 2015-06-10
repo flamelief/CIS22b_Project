@@ -1,4 +1,4 @@
-#ifdef DRIVER
+#ifdef REPORT_DRIVER
 #include <iostream>
 #include "Report.h"
 
@@ -8,7 +8,8 @@ int main(){
 	fstream fs("books.txt", fstream::in | fstream::out | fstream::app );
 	Interface I = Interface(&fs);
 	Report r;
+	
 	r.printInventory();
 	return 0;
 }
-#endif //DRIVER
+#endif //REPORT_DRIVER
