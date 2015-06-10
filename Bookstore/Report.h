@@ -4,18 +4,17 @@
 #include "Book.h"
 #include "Interface.h"
 
-class Book;
+enum Sort { Unsorted, Quantity, Date, Retail, Wholesale };
 
 class Report: Interface{
-	std::vector<Book*> books;
-	bool (*Report::compare)(const Book*, const Book*);
+	std::vector<Book> books;
+	Sort mode;
+	template <typename fT>
+	void sort(fT get);
 public:
 	Report();
 	~Report();
 	void printInventory();
-	void setCompare();// Compare);
-	bool (*Report::getCompare())(const Book*, const Book*);
-	static bool compQuant(const Book *b1, const Book *b2);
-	void sort();
+	void setMode(Sort mode);
 };
 

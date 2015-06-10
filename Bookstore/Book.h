@@ -26,35 +26,32 @@ private:
 	int quantity;
 public:
 	void setISBN(string ISBN);
-	string getISBN();
+	string getISBN() const;
 
 	void setTitle(string title);
-	string getTitle();
+	string getTitle() const;
 
 	void setAuthor(string author);
-	string getAuthor();
+	string getAuthor() const;
 
 	void setPub(string publisher);
-	string getPub();
+	string getPub() const;
 
 	void setWhole(Price wholesale);
-	Price getWhole();
+	Price getWhole() const;
 
 	void setRetail(Price resale);
-	Price getRetail();
+	Price getRetail() const;
 
 	void setQuant(int quantity);
 	int getQuant() const;
 
 	void setDate(Date dateAdded);
-	Date getDate();
+	Date getDate() const;
 
 	friend istream& operator>>(istream &input, Book &B);
 	friend ostream& operator<<(ostream &output, const Book &B);
 
-
-	static bool compQuant(const Book *b1, const Book *b2) { return b1->getQuant() > b2->getQuant(); }
-	
 	#ifndef REPORT_DRIVER
 	friend void Cashier::decrementBookQuant(Book &);
 	#endif //REPORT_DRIVER

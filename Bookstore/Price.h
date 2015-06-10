@@ -25,6 +25,7 @@ public:
 	friend Price operator*(const double &, const Price &);
 	friend Price operator+(const Price &, const Price &);
 	friend bool operator<(const Price &, const Price &);
+	friend bool operator>(const Price &, const Price &);
 };
 
 

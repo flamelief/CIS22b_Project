@@ -22,7 +22,7 @@ istream& operator>>(istream &input, Price &P){
 	// Possibly prompt the user to enter price
 	// cout << "Please enter a price: ";
 	input >> price;
-	P.total_cents = static_cast<int>(floor(price * 100));
+	P.total_cents = int(price * 100);
 	if (!(input && P.isValid())) {
 		input.setstate(ios::failbit);
 	}
@@ -48,21 +48,26 @@ bool Price::isValid(){
 
 bool operator<(const Price &p1, const Price &p2)
 {
-	return p1.total_cents< p2.total_cents; 
+	return p1.total_cents > p2.total_cents; 
+}
+
+bool operator>(const Price &p1, const Price &p2)
+{
+	return p1.total_cents > p2.total_cents; 
 }
 
 Price operator * (const Price& left, const double &right)
 {
 	// Return a multiplication between a Price object and a double as Price
 	Price temp;
-	temp.total_cents = left.total_cents * right;
+	temp.total_cents = int(left.total_cents * right);
 	return temp;
 }
 
 Price operator * (const double& left, const Price &right)
 {
 	Price temp;
-	temp.total_cents = left * right.total_cents;
+	temp.total_cents = int(left * right.total_cents);
 	return temp;
 }
 
