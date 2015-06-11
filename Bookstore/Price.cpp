@@ -56,26 +56,23 @@ bool operator>(const Price &p1, const Price &p2)
 	return p1.total_cents > p2.total_cents; 
 }
 
-Price operator * (const Price& left, const double &right)
+Price Price::operator * (const double &right)
 {
 	// Return a multiplication between a Price object and a double as Price
-	Price temp;
-	temp.total_cents = int(left.total_cents * right);
-	return temp;
+	total_cents *= static_cast<int>(right);
+	return *this;
 }
 
-Price operator * (const double& left, const Price &right)
+Price Price::operator * (const Price &right)
 {
-	Price temp;
-	temp.total_cents = int(left * right.total_cents);
-	return temp;
+	total_cents *= right.total_cents;
+	return *this;
 }
 /*
-Price operator+ (const Price &left, const Price &right)
+Price operator+ (const Price &right)
 {
-	Price temp;
-	temp.total_cents = left.total_cents + right.total_cents;
-	return temp;
+	total_cents += right.total_cents;
+	return *this;
 }
 */
 Price& Price::operator+=(const Price &p) {

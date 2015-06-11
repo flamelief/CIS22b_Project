@@ -3,8 +3,7 @@
 #ifndef CASHIER_H
 #define CASHIER_H
 
-#include "Price.h"
-
+class Price;
 class Book;
 
 const double TAX = 0.925;
