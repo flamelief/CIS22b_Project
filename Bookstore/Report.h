@@ -6,9 +6,9 @@
 
 /*
 	Constructor creates vector of Books from Inventory file.
-	Only exposed method is setMode which takes the operation the
-	user wants and prints the results. If setMode argument is the same as
-	mode, the result will be printed but no other operation will occur (i.e. sorting).
+	Only exposed method is printInventory which takes the operation the
+	user wants and prints the results. If printInventory argument is the same as
+	mode, the result will be printed only.
 */
 enum Sort { Unsorted, Quantity, Date, Retail, Wholesale, RetailList, WholesaleList };
 
@@ -17,10 +17,9 @@ class Report: Interface{
 	Sort mode;
 	template <typename fT>
 	void sort(fT get);
-	void printInventory(Price(Book::*)() const);
 public:
 	Report();
 	~Report();
-	void setMode(Sort mode);
+	void printInventory(Sort mode);
 };
 

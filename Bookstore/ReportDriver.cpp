@@ -9,7 +9,7 @@ int main(){
 	fstream fs("books.txt", fstream::in | fstream::out | fstream::app );
 	Interface I = Interface(&fs);
 	Report r;
-	r.setMode(WholesaleList);
+	r.printInventory(Retail);
 	return 0;
 }
 #endif //REPORT_DRIVER

@@ -19,32 +19,40 @@ Report::~Report()
 	//std::for_each(books.begin(), books.end(), [](const Book &b){ delete b; });
 }
 
-void Report::printInventory(Price(Book::*get)() const) {
+void Report::printInventory(Sort mode){
+	Price(Book::*get)() const;
+	get = NULL;
+	bool sorted = this->mode == mode;
 	Price total;
-	switch (mode) {
+	this->mode = mode;
+	switch (mode){
 		case WholesaleList:
 			cout << "List of wholesale prices: \n";
+			get = &Book::getWhole;
 			break;
 		case RetailList:
 			cout << "List of retail prices: \n";
+			get = &Book::getRetail;
 			break;
 		default:
 			cout << "List of inventory ";
-			switch (mode) {
+			switch (mode){
 				case Unsorted:
 					cout << ":\n";
 					break;
 				case Quantity:
 					cout << "by quantiy:\n";
-					break;
-				case Date:
-					cout << "by date added:\n";
+					if(!sorted) sort(&Book::getQuant);
 					break;
 				case Retail:
-					cout << "by retail price:\n";
+					if(!sorted) sort(&Book::getRetail);
 					break;
 				case Wholesale:
-					cout << "by wholesale price:\n";
+					if(!sorted) sort(&Book::getWhole);
+					break;
+				case Date:
+					//if (!sorted) sort(&Book::getDate);
+					cout << "by date added:\n";
 					break;
 			}
 			std::for_each(books.begin(), books.end(), [](const Book &b){ cout << b << endl; });
@@ -55,36 +63,6 @@ void Report::printInventory(Price(Book::*get)() const) {
 		total += (b.*get)();
 	});
 	cout << "Total cost of inventory: " << total << endl;
-}
-
-void Report::setMode(Sort mode){
-	Price(Book::*get)() const;
-	switch (mode){
-		case WholesaleList:
-			get = &Book::getWhole;
-			break;
-		case RetailList:
-			get = &Book::getRetail;
-			break;
-		default:
-			get = NULL;
-			if (this->mode != mode){
-				switch (mode){
-				case Quantity:
-					sort(&Book::getQuant);
-					break;
-				case Retail:
-					sort(&Book::getRetail);
-					break;
-				case Wholesale:
-					sort(&Book::getWhole);
-					break;
-				}
-			}
-			break;
-	}
-	this->mode = mode;
-	printInventory(get);
 }
 
 template <typename fT>
