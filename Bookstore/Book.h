@@ -19,6 +19,7 @@ using namespace std;
 class Cashier;
 
 class Book {
+	friend class Cashier;
 private:
 	string ISBN, title, author, publisher;
 	Price wholesale, retail;
@@ -53,7 +54,8 @@ public:
 	friend ostream& operator<<(ostream &output, const Book &B);
 
 	#ifndef REPORT_DRIVER
-	friend void Cashier::decrementBookQuant(Book &);
+	//friend void Cashier::decrementBookQuant(int, Book &);
+	
 	#endif //REPORT_DRIVER
 };
 

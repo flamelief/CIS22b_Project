@@ -3,7 +3,9 @@
 #ifndef CASHIER_H
 #define CASHIER_H
 
-#include "Book.h"
+#include "Price.h"
+
+class Book;
 
 const double TAX = 0.925;
 
@@ -17,7 +19,7 @@ public:
 	void setSubtotal(Price s) { sales = s; }
 	Price getSubtotal() const { return sales; }
 	Price getTotal() const { return sales + sales * TAX; } 
-	void decrementBookQuant(Book&);
+	void decrementBookQuant(int, Book&);
 };
 #endif
 #endif //REPORT_DRIVER
