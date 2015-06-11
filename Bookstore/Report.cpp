@@ -45,9 +45,11 @@ void Report::printInventory(Sort mode){
 					if(!sorted) sort(&Book::getQuant);
 					break;
 				case Retail:
+					cout << "by retail price:\n";
 					if(!sorted) sort(&Book::getRetail);
 					break;
 				case Wholesale:
+					cout << "by wholesale price:\n";
 					if(!sorted) sort(&Book::getWhole);
 					break;
 				case Date:

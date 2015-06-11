@@ -70,14 +70,14 @@ Price operator * (const double& left, const Price &right)
 	temp.total_cents = int(left * right.total_cents);
 	return temp;
 }
-/*
+
 Price operator+ (const Price &left, const Price &right)
 {
 	Price temp;
 	temp.total_cents = left.total_cents + right.total_cents;
 	return temp;
 }
-*/
+
 Price& Price::operator+=(const Price &p) {
 	total_cents += p.total_cents;
 	return (*this);
