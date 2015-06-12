@@ -30,6 +30,8 @@ int Book::getQuant() const { return quantity; }
 void Book::setDate(Date d) { dateAdded = d; }
 Date Book::getDate() const { return dateAdded; }
 
+
+
 istream& operator>>(istream &input, Book &B){
 	input.ignore(256, ':'), input.get();
 	input >> B.ISBN;
