@@ -23,7 +23,7 @@ public:
 	inline bool isValid();
 	Price operator*(const double &);
 	Price operator*(const Price &);
-	//friend Price operator +(const Price &, const Price &);
+	Price operator+(const Price &);
 	Price& operator+=(const Price&);
 	friend bool operator<(const Price &, const Price &);
 	friend bool operator>(const Price &, const Price &);

@@ -104,7 +104,6 @@
     <ClInclude Include="Date.h" />
     <ClInclude Include="globals.h" />
     <ClInclude Include="Cashier.h" />
-    <ClInclude Include="Inventory.h" />
     <ClInclude Include="Interface.h" />
     <ClInclude Include="Price.h" />
     <ClInclude Include="Report.h" />
