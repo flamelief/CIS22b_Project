@@ -6,6 +6,8 @@
 
 using namespace std;
 
+Cashier::Cashier() : Interface() {};
+
 void Cashier::decrementBookQuant(int num, Book &b)
 {
 	// Lower quantity of bought book by 1
@@ -16,6 +18,6 @@ void Cashier::decrementBookQuant(int num, Book &b)
 		throw exception;
 	}
 
-	b.quantity -= num;
+	b.quantity -= num; // decrement by 1
 }
 #endif //REPORT_DRIVER
