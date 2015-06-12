@@ -24,6 +24,7 @@ public:
 	void setYear(int y);
 	bool isValid();
 
+	bool operator>(const Date&);
 	friend ostream& operator<<(ostream &output, const Date &D);
 	friend istream& operator>>(istream &input, Date &D);
 

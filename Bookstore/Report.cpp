@@ -47,7 +47,7 @@ void Report::printInventory(Sort mode){
 					if(!sorted) sort(&Book::getWhole);
 					break;
 				case Date:
-					//if (!sorted) sort(&Book::getDate);
+					if (!sorted) sort(&Book::getDate);
 					cout << "by date added:\n";
 					break;
 			}
