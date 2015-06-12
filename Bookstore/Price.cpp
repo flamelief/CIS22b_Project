@@ -12,7 +12,7 @@ Price::Price(int dollars, int cents){
 }
 
 ostream& operator<<(ostream &output, const Price &P){
-	output << "$" << P.getDollars() << "." << P.getCents();
+	output << P.getDollars() << "." << P.getCents();
 	if (!(P.getCents() % 10)) output << "0";
 	return output;
 }
@@ -77,7 +77,7 @@ Price operator+ (const Price &right)
 */
 Price& Price::operator+=(const Price &p) {
 	total_cents += p.total_cents;
-	return (*this);
+	return *this;
 }
 
 

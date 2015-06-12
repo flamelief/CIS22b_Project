@@ -1,7 +1,4 @@
 #pragma once
-#include <vector>
-#include <algorithm>
-#include "Book.h"
 #include "Interface.h"
 
 /*
@@ -10,16 +7,19 @@
 	user wants and prints the results. If printInventory argument is the same as
 	mode, the result will be printed only.
 */
+
 enum Sort { Unsorted, Quantity, Date, Retail, Wholesale, RetailList, WholesaleList };
 
 class Report: Interface{
-	std::vector<Book> books;
+	Interface::books;
 	Sort mode;
 	template <typename fT>
 	void sort(fT get);
 public:
+	Report(string fileName);
 	Report();
 	~Report();
 	void printInventory(Sort mode);
+	void printInventory();
 };
 

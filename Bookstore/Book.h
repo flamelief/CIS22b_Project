@@ -16,8 +16,6 @@
 
 using namespace std;
 
-class Cashier;
-
 class Book {
 	friend class Cashier;
 private:

@@ -1,17 +1,11 @@
 #include "Report.h"
 
+Report::Report(string fileName) : Interface(fileName){
+	Report();
+}
 Report::Report()
 {
-	//TODO: Find behavior on destruction
-	if (*file && file->seekg(ios_base::beg)){
-		file->clear();
-		while(file->good()){
-			Book temp = Book();
-			*file >> temp;
-			books.push_back(temp);
-		}
-		mode = Unsorted;
-	}
+	mode = Unsorted;
 }
 
 Report::~Report()
@@ -57,7 +51,7 @@ void Report::printInventory(Sort mode){
 					cout << "by date added:\n";
 					break;
 			}
-			std::for_each(books.begin(), books.end(), [](const Book &b){ cout << b << endl; });
+			cout << books;
 			return;
 	}
 	std::for_each(books.begin(), books.end(), [&](const Book &b){
@@ -65,6 +59,10 @@ void Report::printInventory(Sort mode){
 		total += (b.*get)();
 	});
 	cout << "Total cost of inventory: " << total << endl;
+}
+
+void Report::printInventory() {
+	printInventory(mode);
 }
 
 template <typename fT>

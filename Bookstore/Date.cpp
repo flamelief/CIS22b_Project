@@ -29,7 +29,7 @@ bool Date::isValid() {
 }
 
 ostream& operator<<(ostream &output, const Date &D){
-	output << D.month << "/" << D.day << "/" << D.year;
+	output << setfill('0') << setw(2) << D.month << "/" << setfill('0') << setw(2) << D.day << "/" << setfill('0') << setw(4) << D.year;
 	return output;
 }
 

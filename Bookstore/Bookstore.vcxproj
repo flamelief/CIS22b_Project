@@ -111,6 +111,7 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="books.txt" />
+    <Text Include="books2.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
