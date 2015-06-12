@@ -42,6 +42,33 @@ istream& operator>>(istream &input, Date &D){
 	return input;
 }
 
+bool datefunction(Book date1, Book date2)
+{
+	return date1.getDate() < date2.getDate();
+
+}
+
+bool operator<(Book date1, Book date2)
+{
+	if (date1.year < date2.year)
+		return true;
+	else if (date1.year == date2.year)
+	{
+		if date1.month < date2.month
+			return true;
+		else if (date1.month == date2.month)
+		{
+			if (date1.day < date2.day)
+				return true;
+			else
+			{
+				return false;
+			}
+		}
+	}
+
+
+} 
 
 
 
