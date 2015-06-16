@@ -30,6 +30,7 @@ int main()
 		cout << "|  4. Exit Program               |\n";
 		cout << "|                                |\n";
 		cout << "|  Enter Your Choice: ";
+		cin >> cInput;
 		while ((cInput < '1') || (cInput > '4'))
 			cout << "Invalid Input, Please enter a number between 1 and 4: ";
 		if (cInput == '1'){
