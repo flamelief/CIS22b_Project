@@ -53,6 +53,8 @@ public:
 
 	#ifndef REPORT_DRIVER
 	//friend void Cashier::decrementBookQuant(int, Book &);
+
+	string getProperty(int);
 	
 	#endif //REPORT_DRIVER
 };
