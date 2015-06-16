@@ -56,6 +56,19 @@ public:
 
 	string getProperty(int);
 	string toString(int);
+
+
+
+
+	const static int ISB = 1,                  // the purpose of these static variables is for the ReportModule to decide which properties of Book do we want to display out
+		BKTTLE = 2,
+		AUTHNAME = 4,
+		PUB = 8,
+		DATE = 16,
+		QUANT = 32,
+		WCOST = 64,
+		RET = 128,                    //it ended exactly at 8, so these values can be representated with 1 int
+		EVERYTHING = 255;
 	
 	#endif //REPORT_DRIVER
 };
