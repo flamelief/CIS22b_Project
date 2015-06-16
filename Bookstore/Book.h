@@ -9,7 +9,7 @@
 #include "Price.h"
 #include "Date.h"
 #ifndef REPORT_DRIVER
-#include "Cashier.h"
+//#include "Cashier.h"
 #endif //REPORT_MODULE
 
 #include <string>
@@ -17,7 +17,6 @@
 using namespace std;
 
 class Book {
-	friend class Cashier;
 private:
 	string ISBN, title, author, publisher;
 	Price wholesale, retail;

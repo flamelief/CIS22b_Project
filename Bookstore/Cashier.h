@@ -6,17 +6,15 @@
 #include "Interface.h"
 #include "Price.h"
 
-class Book; // may not be necessary
-
 /* Cashier class stores the prices of the books and calculates the price with tax
 It is a child class for Interface, as it interacts with the vector of books
 */
 
 const double TAX = 0.925; // 9.25% sales tax
 
-class Cashier : public Interface, public Price 
+class Cashier : public Interface
 {
-private: // inherits vector of books from inventory
+private: 
 	Price sales;
 public:
 	Cashier();
@@ -24,7 +22,7 @@ public:
 	void setSubtotal(Price s) { sales = s; }
 	Price getSubtotal() const { return sales; }
 	Price getTotal() const { return sales + sales * TAX; } 
-	void decrementBookQuant(int, Book&); // should interact with interface book vector vector<Book> books 
+	void decrementBookQuant(int, vector <Book>&); // gets access as child class of interface, inherits protected vector<Book> books
 										 // Decrements the quantity of a book when it is purchased, can purchase more than one of a particular book
 };
 #endif
