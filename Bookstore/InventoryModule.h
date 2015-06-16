@@ -5,11 +5,12 @@
 #include "Book.h"
 #include <vector>
 #include <iostream>
+#include "Interface.h"
 
 
 using namespace std;
 
-class InventoryDatabaseModule : public Module
+class InventoryDatabaseModule : Interface, public Module
 {
 public:
 	InventoryDatabaseModule(BookList*);
