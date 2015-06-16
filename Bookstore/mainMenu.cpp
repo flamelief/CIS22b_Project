@@ -2,6 +2,9 @@
 #include <iostream>
 #include <iomanip>
 #include <string>
+#include "Report.h"
+#include "InventoryModule.h"
+#include "Cashier.h"
 
 using namespace std;
 
