@@ -55,6 +55,7 @@ public:
 	//friend void Cashier::decrementBookQuant(int, Book &);
 
 	string getProperty(int);
+	string toString(int);
 	
 	#endif //REPORT_DRIVER
 };
