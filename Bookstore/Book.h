@@ -17,6 +17,7 @@
 using namespace std;
 
 class Book {
+	friend class Cashier;
 private:
 	string ISBN, title, author, publisher;
 	Price wholesale, retail;
@@ -51,7 +52,7 @@ public:
 	friend ostream& operator<<(ostream &output, const Book &B);
 
 	#ifndef REPORT_DRIVER
-	//friend void Cashier::decrementBookQuant(int, Book &);
+	//friend void Cashier::decrementBookQuant(vector <Book> &);
 
 	string getProperty(int);
 	string toString(int);

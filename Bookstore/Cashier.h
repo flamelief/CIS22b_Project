@@ -21,9 +21,9 @@ public:
 	double getTax() const { return TAX; }
 	void setSubtotal(Price s) { sales = s; }
 	Price getSubtotal() const { return sales; }
-	Price getTotal() const { return sales + sales * TAX; } 
-	void decrementBookQuant(int, vector <Book>&); // gets access as child class of interface, inherits protected vector<Book> books
-										 // Decrements the quantity of a book when it is purchased, can purchase more than one of a particular book
+	Price getTotal() { return sales + sales * TAX; } 
+	void decrementBookQuant(vector <Book>&); // gets access as child class of interface, inherits protected vector<Book> books
+										 // Decrements the quantity of a book when it is purchased
 };
 #endif
 #endif //REPORT_DRIVER
