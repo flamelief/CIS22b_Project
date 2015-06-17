@@ -4,9 +4,8 @@
 #include <string>
 #include "Report.h"
 #include "InventoryModule.h"
+#include "Interface.h"
 #include "Cashier.h"
-
-
 using namespace std;
 
 
@@ -100,19 +99,19 @@ int main()
 			printInventoryModule();
 			getline(cin, command);
 			int option = atoi(command.c_str());
-			InventoryDatabaseModule inv;
+			InventoryDatabaseModule* inv = new InventoryDatabaseModule();
 			int tempOpt = 0;
 
 			while ( tempOpt != 5 )
 			{
 				if (option == 1)
-					inv.lookUpBook();
+					inv->lookUpBook();
 				else if (option == 2)
-					inv.addBook();
+					inv->addBook();
 				else if (option == 3)
-					inv.editBook();
+					inv->editBook();
 				else if (option == 4)
-					inv.deleteBook();
+					inv->deleteBook();
 				else if ( option == 5 )
 				{
 					cout << "u r stupid";
