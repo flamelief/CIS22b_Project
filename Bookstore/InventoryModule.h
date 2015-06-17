@@ -1,3 +1,4 @@
+
 #ifndef INVENTORY_DATABASE_MODULE
 #define INVENTORY_DATABASE_MODULE
 
@@ -26,4 +27,4 @@ public:
 
 
 
-#endif 
+#endif
