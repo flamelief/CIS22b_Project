@@ -93,7 +93,10 @@ int main()
 		if (tempOption == 1){
 			cout << endl << endl;
 			//cashier module
+			Cashier menu("books2.txt");
+			menu.printCashierMenu();
 		}
+		#ifndef DEBUG
 		else if (tempOption == 2){
 			cout << endl << endl;
 			printInventoryModule();
@@ -119,7 +122,9 @@ int main()
 				}
 			}
 			//Inventory Database Module
+			
 		}
+		#endif // Debug
 		else if (tempOption == 3)
 		{
 			Report r("books2.txt");

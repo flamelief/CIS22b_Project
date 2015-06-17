@@ -15,7 +15,7 @@ Interface::Interface(string name)
 			file >> temp;
 			if (file) addBook(temp);
 		}
-		cout << books.size() << endl;
+		//cout << books.size() << endl;
 		file.close();
 	}
 }

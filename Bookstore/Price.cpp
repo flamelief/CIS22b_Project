@@ -81,4 +81,9 @@ Price& Price::operator+=(const Price &p) {
 	return *this;
 }
 
+//Price Price::operator=(const int num)
+//{
+//	total_cents = num;
+//}
+
 

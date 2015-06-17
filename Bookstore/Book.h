@@ -23,6 +23,8 @@ private:
 	Price wholesale, retail;
 	int quantity;
 public:
+	Book(); 
+
 	Date dateAdded;
 	void setISBN(string ISBN);
 	string getISBN() const;

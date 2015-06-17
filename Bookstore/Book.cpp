@@ -4,6 +4,12 @@
 
 #include "Book.h"
 
+Book::Book() 
+{
+	title = "Unknown Book";
+	quantity = 0;
+}
+
 void Book::setISBN(string ISBN) { this->ISBN = ISBN; }
 string Book::getISBN() const { return ISBN; }
 
