@@ -1,13 +1,14 @@
 #include "Inventory.h"
 
+vector<Book>::iterator Inventory::curBook;
 
 Inventory::Inventory(string filename) : Interface(filename)
 {
-	curBook = books.begin();
+	curBook = books.end();
 }
 
 Inventory::Inventory() {
-	curBook = books.begin();
+	curBook = books.end();
 }
 
 Inventory::~Inventory()
@@ -15,9 +16,8 @@ Inventory::~Inventory()
 }
 
 bool Inventory::findBook(string titleISBN) {
-	for (vector<Book>::iterator it = books.begin(); it != books.end(); it++){
-		if (titleISBN == it->getTitle() || titleISBN == it->getISBN()) {
-			curBook = it;
+	for (curBook = books.begin(); curBook != books.end(); curBook++){
+		if (titleISBN == curBook->getTitle() || titleISBN == curBook->getISBN()) {
 			return true;
 		}
 	}
@@ -25,7 +25,9 @@ bool Inventory::findBook(string titleISBN) {
 }
 
 void Inventory::deleteBook() {
-	books.erase(curBook);
+	if (curBook != books.end()) {
+		books.erase(curBook);
+	}
 }
 
 template <typename fT, class valT>
@@ -60,3 +62,4 @@ Book Inventory::getBook() {
 void Inventory::addBook() {
 	pushBook(getBook());
 }
+

@@ -1,49 +1,49 @@
 #include "Report.h"
 
 Report::Report(string fileName) : Interface(fileName){
-	mode = Unsorted;
+	mode = Sort::Unsorted;
 }
 Report::Report()
 {
-	mode = Unsorted;
+	mode = Sort::Unsorted;
 }
 
 Report::~Report() {}
 
-void Report::printInventory(Sort mode){
+void Report::printInventory(Sort::Mode mode){
 	Price(Book::*get)() const;
 	get = NULL;
 	bool sorted = this->mode == mode;
 	Price total;
 	this->mode = mode;
 	switch (mode){
-		case WholesaleList:
+		case Sort::WholesaleList:
 			cout << "List of wholesale prices: \n";
 			get = &Book::getWhole;
 			break;
-		case RetailList:
+		case Sort::RetailList:
 			cout << "List of retail prices: \n";
 			get = &Book::getRetail;
 			break;
 		default:
 			cout << "List of inventory ";
 			switch (mode){
-				case Unsorted:
+				case Sort::Unsorted:
 					cout << ":\n";
 					break;
-				case Quantity:
+				case Sort::Quantity:
 					cout << "by quantiy:\n";
 					if(!sorted) sort(&Book::getQuant);
 					break;
-				case Retail:
+				case Sort::Retail:
 					cout << "by retail price:\n";
 					if(!sorted) sort(&Book::getRetail);
 					break;
-				case Wholesale:
+				case Sort::Wholesale:
 					cout << "by wholesale price:\n";
 					if(!sorted) sort(&Book::getWhole);
 					break;
-				case Date:
+				case Sort::Date:
 					if (!sorted) sort(&Book::getDate);
 					cout << "by date added:\n";
 					break;

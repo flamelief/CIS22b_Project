@@ -1,11 +1,15 @@
 #pragma once
 #include "Interface.h"
 
+namespace Edit {
+	enum  Mode { ISBN, Author, Date, Retail, Wholesale, RetailList, WholesaleList };
+}
+
 class Inventory :
 	private Interface
 {
 	Book getBook();
-	std::vector<Book>::iterator curBook;
+	static std::vector<Book>::iterator curBook;
 public:
 	Inventory();
 	Inventory(string filename);

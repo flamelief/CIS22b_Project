@@ -10,7 +10,7 @@ int main(){
 	//Report r("books2.txt");
 	//r.printInventory(RetailList);
 	Inventory i("books2.txt");
-	i.addBook();
+	i.deleteBook();
 
 	return 0;
 }
