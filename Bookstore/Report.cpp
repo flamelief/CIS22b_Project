@@ -64,7 +64,7 @@ void Report::printInventory(Sort mode){
 void Report::printInventory() {
 	printInventory(mode);
 }
-
+// sort that takes in type fT
 template <typename fT>
 void Report::sort(fT get) {
 	std::sort(books.begin(), books.end(), 
