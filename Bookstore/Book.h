@@ -39,7 +39,7 @@ public:
 	void setWhole(Price wholesale);
 	Price getWhole() const;
 
-	void setRetail(Price resale);
+	void setRetail(Price retail);
 	Price getRetail() const;
 
 	void setQuant(int quantity);
@@ -47,6 +47,8 @@ public:
 
 	void setDate(Date dateAdded);
 	Date getDate() const;
+
+	Price getTotal() { return retail + retail * TAX; } // added here so that books can use this function
 
 	friend istream& operator>>(istream &input, Book &B);
 	friend ostream& operator<<(ostream &output, const Book &B);
