@@ -1,50 +1,9 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include "InventoryModule.h"
-
+#include "Price.h"
 using namespace std;
 
 
-InventoryDatabaseModule::InventoryDatabaseModule(BookList *b) :Module(b)
-{
-}
-
-/*
-Psuedo Code
-Ask the -user if they want to look up a Book
-- add a book
-- edit a Book's Record
-- delete a book
-- return to the main menu
-*/
-void InventoryDatabaseModule::act()
-{
-	bookList->readFromFile();
-	char cInput;
-	cout << "|     InventoryDatabase Module   |\n";
-	cout << "|                                |\n";
-	cout << "|  1. Look Up a Book             |\n";
-	cout << "|  2. Add a Book                 |\n";
-	cout << "|  3. Edit a Book's Record       |\n";
-	cout << "|  4. Delete a Book              |\n";
-	cout << "|  5. Return to the Main Menu    |\n";
-	cout << "|                                |\n";
-	cout << "|  Enter Your Choice: ";
-
-	while (!readChar(cInput) || (cInput < '1') || (cInput > '5')) {
-		cout << "\nPlease enter a number between 1 and 5: ";
-	}
-	if (cInput == '1')
-		lookUpBook();
-	else if (cInput == '2')
-		addBook();
-	else if (cInput == '3')
-		editBook();
-	else if (cInput == '4')
-		deleteBook();
-	//else if cInput == '5', then just exit the method
-	bookList->writeToFile();
-
-}
 
 
 void InventoryDatabaseModule::lookUpBook()
@@ -101,7 +60,7 @@ void InventoryDatabaseModule::addBook()
 	Book book;
 	string addStr;
 	int addInt;
-	double addDouble;
+	Price addDouble;
 	vector<Book*> tempV;
 
 	cout << "Enter in the ISBN: ";
@@ -140,13 +99,9 @@ void InventoryDatabaseModule::addBook()
 	book.setQuant(addInt);
 
 	cout << "Enter in the Wholesale Cost: ";
-	while (!readDouble(addDouble) || addDouble < 0)					//Error checking
-		cout << "Enter in an positive decimal: ";
 	book.setWhole(addDouble);
 
 	cout << "Enter in the Retail Price: ";
-	while (!readDouble(addDouble) || addDouble < 0)					//Error checking
-		cout << "Enter in an positive decimal: ";
 	book.setRetail(addDouble);
 
 	cout << endl << "Displaying the Books Information..." << endl;
@@ -188,7 +143,7 @@ void InventoryDatabaseModule::editBook()
 			}
 			string newChangeSTR; //this variable holds properties of the book which are strings
 			int newChangeINT;    //this variable holds properties of the book which are ints
-			double newChangeDB;  ////this variable holds properties of the book which are doubles
+			Price newChangeDB;  ////this variable holds properties of the book which are doubles
 
 			cout << endl;
 			//Depending on what the user chose...
