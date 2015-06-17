@@ -40,39 +40,88 @@ void printReportOptions()
 	cout << "|  Enter Your Choice: ";
 }
 
+void printInventoryModule()
+{
+	cout << "|================================|\n";
+	cout << "|     InventoryDatabase Module   |\n";
+	cout << "|                                |\n";
+	cout << "|  1. Look Up a Book             |\n";
+	cout << "|  2. Add a Book                 |\n";
+	cout << "|  3. Edit a Book's Record       |\n";
+	cout << "|  4. Delete a Book              |\n";
+	cout << "|  5. Return to the Main Menu    |\n";
+	cout << "|                                |\n";
+	cout << "|  Enter Your Choice: ";
+
+}
+
+
+/*Pseudo Code
+-Initialize all the modules
+-In a while loop, ask the user for which module they want to enter
+- if they choose 1, then go into Cashier Module
+- if they chooes 2, then go into InventoryDataBase Module
+- if they choose 3, then go inside Report Module
+- if they choose 4, then exit the program
+*/
 int main()
 {
 
-	/*Pseudo Code
-	-Initialize all the modules
-	-In a while loop, ask the user for which module they want to enter
-	- if they choose 1, then go into Cashier Module
-	- if they chooes 2, then go into InventoryDataBase Module
-	- if they choose 3, then go inside Report Module
-	- if they choose 4, then exit the program
-	*/
+
+
 	//inline function
 	void printMain();
 	void printReportOptions();
+	void printInventoryModule();
 
-
-
-	char cInput;
+	int tempOption = 0;
 	string command = "";
+
 	do{
 		printMain();
 		getline(cin, command);
-		while ((cInput < '1') || (cInput > '4'))
+
+		tempOption = static_cast<int>(atoi(command.c_str()));
+
+
+
+		if ((tempOption< 1) || (tempOption> 4))
+		{
 			cout << "Invalid Input, Please enter a number between 1 and 4: ";
-		if (cInput == '1'){
+			continue;
+		}
+
+		if (tempOption == 1){
 			cout << endl << endl;
 			//cashier module
 		}
-		else if (cInput == '2'){
+		else if (tempOption == 2){
 			cout << endl << endl;
+			printInventoryModule();
+			getline(cin, command);
+			int option = atoi(command.c_str());
+			InventoryDatabaseModule inv;
+			int tempOpt = 0;
+
+			while ( tempOpt != 5 )
+			{
+				if (option == 1)
+					inv.lookUpBook();
+				else if (option == 2)
+					inv.addBook();
+				else if (option == 3)
+					inv.editBook();
+				else if (option == 4)
+					inv.deleteBook();
+				else if ( option == 5 )
+				{
+					cout << "u r stupid";
+					break;
+				}
+			}
 			//Inventory Database Module
 		}
-		else if (cInput == '3')
+		else if (tempOption == 3)
 		{
 			Report r("books2.txt");
 			cout << endl << endl;
@@ -81,14 +130,14 @@ int main()
 			int option = atoi(command.c_str());
 			Sort d = static_cast<Sort>(option);
 			r.printInventory(d);
-
-
-
 		}
-		else if (cInput = '4')
-			cout << endl << endl;
-	} while (cInput != '4');
-	// exit
+		else if (tempOption == 4)
+		{
+			cout << "EXIT OUT" << endl << endl;
+			break;
+		}
+	} while (tempOption != 4);
+	// exitc
 	return 0;
 }
 #endif //DEBUG
