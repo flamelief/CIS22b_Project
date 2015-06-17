@@ -43,6 +43,7 @@ istream& operator>>(istream &input, Date &D){
 	return input;
 }
 
+// Date compare
 bool Date::operator>(const Date& date)
 {
 	if (year < date.year) return true;
