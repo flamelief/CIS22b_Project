@@ -25,10 +25,10 @@ public:
 	Price wholesale, retail;
 	Date dateAdded;
 	void setISBN(string ISBN);
-	string getISBN() const;
+	string getISBN();
 
 	void setTitle(string title);
-	string getTitle() const;
+	string getTitle();
 
 	void setAuthor(string author);
 	string getAuthor() const;

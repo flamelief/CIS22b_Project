@@ -1,3 +1,4 @@
+#ifndef DEBUG
 #ifndef MODULE
 #define MODULE
 
@@ -11,6 +12,7 @@ class Module
 protected:                           //this is defined as protected so that inheriting classes can have acces to it
 	BookList *bookList;
 public:
+	Module();
 	Module(BookList *bookList);           //the constructor
 	virtual void act() = 0;          //the pure virtual function, the act() method basically contains the menu for all classes which choose to inherit of this class
 	// also when this method returns, then the option "Return to Main Menu" has probably been called
@@ -33,3 +35,4 @@ private:
 
 
 #endif
+#endif //DEBUG

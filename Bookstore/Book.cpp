@@ -5,10 +5,10 @@
 #include "Book.h"
 
 void Book::setISBN(string ISBN) { this->ISBN = ISBN; }
-string Book::getISBN() const { return ISBN; }
+string Book::getISBN() { return ISBN; }
 
 void Book::setTitle(string title) { this->title = title; }
-string Book::getTitle() const { return title; }
+string Book::getTitle() { return title; }
 
 void Book::setAuthor(string author) { this->author = author; }
 string Book::getAuthor() const { return author; }

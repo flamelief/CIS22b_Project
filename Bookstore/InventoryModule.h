@@ -1,3 +1,4 @@
+
 #ifndef INVENTORY_DATABASE_MODULE
 #define INVENTORY_DATABASE_MODULE
 
@@ -10,7 +11,7 @@
 
 using namespace std;
 
-class InventoryDatabaseModule : Interface, public Module
+class InventoryDatabaseModule : public Module
 {
 public:
 	InventoryDatabaseModule(BookList*);
