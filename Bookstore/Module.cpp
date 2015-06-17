@@ -1,3 +1,4 @@
+#ifndef DEBUG
 #include "Module.h"
 #include <iostream>
 #include <string>
@@ -72,3 +73,5 @@ bool Module::isStringDouble(char *cArray)
 	}
 	return true;
 }
+
+#endif //DEBUG
