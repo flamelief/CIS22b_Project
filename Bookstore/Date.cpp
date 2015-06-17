@@ -1,4 +1,5 @@
 #include "Date.h"
+#include <algorithm>
 
 
 Date::Date(int d, int m, int y)
@@ -36,7 +37,7 @@ ostream& operator<<(ostream &output, const Date &D){
 istream& operator>>(istream &input, Date &D){
 	char delim1, delim2;
 	input >> D.month >> delim1 >> D.day >> delim2 >> D.year;
-	if (!(input && delim1 == '/' && delim2 == '/' )){
+	if (!(input && delim1 == '/' && delim2 == '/')){
 		input.setstate(ios::failbit);
 	}
 	return input;
@@ -54,7 +55,8 @@ bool Date::operator>(const Date& date)
 		}
 	}
 	return false;
-} 
+}
+
 
 Date::~Date()
 {
