@@ -9,8 +9,8 @@
 using namespace std;
 
 
-
-void printMain()
+// function for mainmenu screen display
+void  printMain()
 {
 	cout << "|================================|\n";
 	cout << "|    Serendipity Booksellers     |\n";
@@ -23,6 +23,7 @@ void printMain()
 	cout << "|  Enter Your Choice: ";
 }
 
+// function for report menu display
 void printReportOptions()
 {
 	cout << "|================================|\n";
@@ -38,7 +39,7 @@ void printReportOptions()
 	cout << endl;
 	cout << "|  Enter Your Choice: ";
 }
-
+// function for inventory screen display
 void printInventoryModule()
 {
 	cout << "|================================|\n";
