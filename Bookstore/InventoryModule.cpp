@@ -1,3 +1,4 @@
+#ifndef DEBUG
 #define _CRT_SECURE_NO_WARNINGS
 #include "InventoryModule.h"
 #include "Price.h"
@@ -76,8 +77,10 @@ void InventoryDatabaseModule::addBook()
 	cout << "Enter in the Title: "; readString(addStr); book.setTitle(addStr);
 	cout << "Enter in the Author: "; readString(addStr); book.setAuthor(addStr);
 	cout << "Enter in the Publisher: "; readString(addStr); book.setPub(addStr);
-	cout << "Entering in the Date Added(just type in integers)... " << endl;
+	cout << "Enter in the Date (mm/dd/yyyy)... " << endl;
 
+	cin >> book.dateAdded;
+	/*
 	cout << "Enter the Month: ";
 	while (!readInt(addInt) || addInt < 1 || addInt > 12)                   //Error checking, just making sure they dont enter in words or decimals
 		cout << "Enter in a integer between 1 and 12: ";
@@ -92,7 +95,7 @@ void InventoryDatabaseModule::addBook()
 	while (!readInt(addInt) || addInt < 0)					//Error checking
 		cout << "Enter in a positive integer: ";
 	book.setYear(addInt);
-
+	*/
 	cout << "Enter in the Quantity-On-Hand: ";
 	while (!readInt(addInt) || addInt < 0)					//Error checking
 		cout << "Enter in an positive integer or 0: ";
@@ -181,6 +184,8 @@ void InventoryDatabaseModule::editBook()
 				//date has 3 parts therefore, there must be three different input values
 
 				//Get variable newChange
+				cin >> book->dateAdded;
+				/*
 				cout << "What do you want to change the date to: ";
 				cout << "Month: ";
 				readInt(newChangeINT); book->setMonth(newChangeINT);
@@ -188,27 +193,31 @@ void InventoryDatabaseModule::editBook()
 				readInt(newChangeINT); book->setDay(newChangeINT);
 				cout << "Year: ";
 				readInt(newChangeINT); book->setYear(newChangeINT);
+				*/
 			}
 			else if (change == '6')
 			{
 				//Get variable newChange
 				cout << "What do you want to change the quantity to: ";
 				readString(newChangeSTR);
+				newChangeINT = atoi(newChangeSTR.c_str());
 				book->setQuant(newChangeINT);//change the info from the book to newChange value
 			}
 			else if (change == '7')
 			{
 				//Get variable newChange
 				cout << "What do you want to change the cost to: ";
-				readDouble(newChangeDB);
-				book->setWhole(newChangeDB); //change the info from the book to newChange value
+				//readDouble(newChangeDB);
+				//book->setWhole(newChangeDB); //change the info from the book to newChange value
+				cin >> book->wholesale;
 			}
 			else if (change == '8')
 			{
 				//Get variable newChange
 				cout << "What do you want to change the resale value to: ";
-				readDouble(newChangeDB);
-				book->setRetail(newChangeDB); //change the info from the book to newChange value
+				//readDouble(newChangeDB);
+				//book->setRetail(newChangeDB); //change the info from the book to newChange value
+				cin >> book->retail;
 			}
 
 			cout << "Is there anything else you wish to edit from this book?(Type 'Y' or 'N'): ";
@@ -287,3 +296,5 @@ void InventoryDatabaseModule::deleteBook()
 		cout << "Book Deleted Succesfully" << endl;
 	}
 }
+
+#endif //DEBUG

@@ -7,7 +7,7 @@ using namespace std;
 
 int main(){
 		Report r("books2.txt");
-		r.printInventory(WholesaleList);
+		r.printInventory(RetailList);
 	return 0;
 }
 #endif //REPORT_DRIVER

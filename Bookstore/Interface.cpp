@@ -13,7 +13,7 @@ Interface::Interface(string name)
 		while (file) {
 			Book temp;
 			file >> temp;
-			if (file) addBook(temp);
+			if (file) pushBook(temp);
 		}
 		//cout << books.size() << endl;
 		file.close();
@@ -39,7 +39,7 @@ ostream &operator<<(ostream &output, const vector<Book>& books){
 	return output;
 }
 
-void Interface::addBook(const Book b){
+void Interface::pushBook(const Book b){
 	if (books.size()){
 		if (books.size() >= books.capacity()) {
 			books.reserve(books.capacity() * 2);

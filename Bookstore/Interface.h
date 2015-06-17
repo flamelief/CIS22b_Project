@@ -14,7 +14,7 @@ protected:
 	Interface();
 	Interface(string fileName);
 	~Interface();
-	void addBook(const Book);
+	void pushBook(const Book);
 	static vector<Book> books;
 	friend ostream& operator<<(ostream&, const  vector<Book>&);
 };

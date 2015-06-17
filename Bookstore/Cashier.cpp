@@ -108,9 +108,10 @@ void Cashier::printCashierMenu(/*vector <Book> &b*/)
 	// a loop type to get books
 
 	// dynamically allocate a local pointer to hold the books and then add values to that pointer
-	/*
+	
 	cout << "How many books are you purchasing?" << endl;
 	cin >> amount;
+	/*=
 	cin.get();
 	Book * boughtBooks = new Book[amount];
 	

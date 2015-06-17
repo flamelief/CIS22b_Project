@@ -9,8 +9,8 @@
 using namespace std;
 
 
-
-void printMain()
+// function for mainmenu screen display
+void  printMain()
 {
 	cout << "|================================|\n";
 	cout << "|    Serendipity Booksellers     |\n";
@@ -23,6 +23,7 @@ void printMain()
 	cout << "|  Enter Your Choice: ";
 }
 
+// function for report menu display
 void printReportOptions()
 {
 	cout << "|================================|\n";
@@ -38,7 +39,7 @@ void printReportOptions()
 	cout << endl;
 	cout << "|  Enter Your Choice: ";
 }
-
+// function for inventory screen display
 void printInventoryModule()
 {
 	cout << "|================================|\n";
@@ -102,10 +103,10 @@ int main()
 			printInventoryModule();
 			getline(cin, command);
 			int option = atoi(command.c_str());
-			InventoryDatabaseModule* inv = new InventoryDatabaseModule();
+			//InventoryDatabaseModule* inv = new InventoryDatabaseModule();
 			int tempOpt = 0;
 
-			while ( tempOpt != 5 )
+		/*	while ( tempOpt != 5 )
 			{
 				if (option == 1)
 					inv->lookUpBook();
@@ -115,7 +116,7 @@ int main()
 					inv->editBook();
 				else if (option == 4)
 					inv->deleteBook();
-				else if ( option == 5 )
+				else if ( option == 5 ) */
 				{
 					cout << "u r stupid";
 					break;
