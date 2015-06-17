@@ -1,7 +1,7 @@
 #include "Report.h"
 
 Report::Report(string fileName) : Interface(fileName){
-	Report();
+	mode = Unsorted;
 }
 Report::Report()
 {

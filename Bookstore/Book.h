@@ -21,9 +21,11 @@ class Book {
 private:
 	string ISBN, title, author, publisher;
 	Price wholesale, retail;
-	Date dateAdded;
 	int quantity;
 public:
+	//This allows the >> operator to input to a book directly
+	//The book vector is still protected since they are private in the modules.
+	Date dateAdded;
 	void setISBN(string ISBN);
 	string getISBN() const;
 
@@ -47,6 +49,7 @@ public:
 
 	void setDate(Date dateAdded);
 	Date getDate() const;
+
 
 	friend istream& operator>>(istream &input, Book &B);
 	friend ostream& operator<<(ostream &output, const Book &B);

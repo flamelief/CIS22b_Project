@@ -10,10 +10,11 @@ class Interface
 {
 	static string fileName;
 public:
-	~Interface();
 protected:
 	Interface();
 	Interface(string fileName);
+	~Interface();
+	void addBook(const Book);
 	static vector<Book> books;
 	friend ostream& operator<<(ostream&, const  vector<Book>&);
 };

@@ -70,6 +70,12 @@
     <Text Include="books2.txt">
       <Filter>Resource Files</Filter>
     </Text>
+    <Text Include="books3.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="books4.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
