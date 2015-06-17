@@ -8,10 +8,7 @@ Report::Report()
 	mode = Unsorted;
 }
 
-Report::~Report()
-{
-	//std::for_each(books.begin(), books.end(), [](const Book &b){ delete b; });
-}
+Report::~Report() {}
 
 void Report::printInventory(Sort mode){
 	Price(Book::*get)() const;

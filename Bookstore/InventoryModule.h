@@ -15,14 +15,10 @@ class InventoryDatabaseModule : Interface, public Module
 public:
 	InventoryDatabaseModule(BookList*);
 	void act();  
-
-
 	void addBook();
 	void lookUpBook();            
 	void editBook();
 	void deleteBook();
-
-
 };
 
 
