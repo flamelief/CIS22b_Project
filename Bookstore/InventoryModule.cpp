@@ -1,3 +1,4 @@
+#ifndef DEBUG
 #define _CRT_SECURE_NO_WARNINGS
 #include "InventoryModule.h"
 #include "Price.h"
@@ -295,3 +296,5 @@ void InventoryDatabaseModule::deleteBook()
 		cout << "Book Deleted Succesfully" << endl;
 	}
 }
+
+#endif //DEBUG
