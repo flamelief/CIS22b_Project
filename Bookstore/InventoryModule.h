@@ -10,10 +10,12 @@
 
 using namespace std;
 
-class InventoryDatabaseModule : Interface, public Module
+class InventoryDatabaseModule : Interface
 {
 public:
-	InventoryDatabaseModule(BookList*);
+	InventoryDatabaseModule() :Interface()
+	{
+	}
 	void act();  
 
 
