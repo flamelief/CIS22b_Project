@@ -17,14 +17,10 @@ public:
 	{
 	}
 	void act();  
-
-
 	void addBook();
 	void lookUpBook();            
 	void editBook();
 	void deleteBook();
-
-
 };
 
 
