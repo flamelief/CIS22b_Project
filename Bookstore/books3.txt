@@ -166,14 +166,6 @@ Date Added: 05/28/2015
 Quantity On Hand: 2
 Wholesale Cost: 9.00
 Retail Cost: 12.00
-ISBN: 9780061730337
-Title: The Boy Who Harnessed the Wind: Creating Currents of Electricity and Hope
-Author: William Kamkwamba, Bryan Mealer
-Publisher: HarperCollins Publishers
-Date Added: 05/28/1990
-Quantity On Hand: 1
-Wholesale Cost: 11.00
-Retail Cost: 12.00
 ISBN: 9780062190376
 Title: Seveneves
 Author: Neal Stephenson
@@ -198,3 +190,11 @@ Date Added: 05/28/2015
 Quantity On Hand: 1
 Wholesale Cost: 13.00
 Retail Cost: 21.00
+ISBN: 9780061730337
+Title: The Boy Who Harnessed the Wind: Creating Currents of Electricity and Hope
+Author: William Kamkwamba, Bryan Mealer
+Publisher: HarperCollins Publishers
+Date Added: 05/28/1990
+Quantity On Hand: 1
+Wholesale Cost: 11.00
+Retail Cost: 12.00

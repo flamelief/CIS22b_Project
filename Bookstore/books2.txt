@@ -67,7 +67,7 @@ Title: The Art of War
 Author: Sun Tzu
 Publisher: Filiquarian Publishing
 Date Added: 05/28/2015
-Quantity On Hand: 3
+Quantity On Hand: 2
 Wholesale Cost: 2.00
 Retail Cost: 4.00
 ISBN: 9780375725609
@@ -278,11 +278,11 @@ Date Added: 01/01/0001
 Quantity On Hand: 3
 Wholesale Cost: 12.99
 Retail Cost: 1.00
-ISBN: 11
-Title: 111
-Author: 111
-Publisher: 111
-Date Added: 01/01/0001
-Quantity On Hand: 3
-Wholesale Cost: 11.00
-Retail Cost: 12.00
+ISBN: 0123456789123
+Title: The Best Book Ever
+Author: Manish, Goel
+Publisher: De Anza College
+Date Added: 06/18/2015
+Quantity On Hand: 10
+Wholesale Cost: 10.00
+Retail Cost: 20.00
