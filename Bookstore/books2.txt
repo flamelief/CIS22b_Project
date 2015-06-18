@@ -6,7 +6,7 @@ Date Added: 01/01/0012
 Quantity On Hand: 234
 Wholesale Cost: 19.00
 Retail Cost: 20.00
-ISBN: 1
+ISBN: 1234
 Title: w
 Author: nope
 Publisher: leslie
@@ -215,10 +215,18 @@ Quantity On Hand: 2
 Wholesale Cost: 17.00
 Retail Cost: 20.00
 ISBN: 123
-Title: Real Talk
+Title: Man Up
 Author: D'Angelo
-Publisher: Who
-Date Added: 01/02/0003
-Quantity On Hand: 33
-Wholesale Cost: 19.99
-Retail Cost: 22.200
+Publisher: R&B Records
+Date Added: 10/28/1991
+Quantity On Hand: 34
+Wholesale Cost: 12.00
+Retail Cost: 15.32
+ISBN: 1234
+Title: Wee Man
+Author: Wut
+Publisher: Wat
+Date Added: 01/02/1999
+Quantity On Hand: 32
+Wholesale Cost: 19.800
+Retail Cost: 6666.00

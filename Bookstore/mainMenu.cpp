@@ -69,16 +69,17 @@ void printInventoryFound()
 void printInventoryEdit()
 {
 	cout << "|================================|\n";
-	cout << "|     InventoryDatabase Module   |\n";
+	cout << "|    InventoryDatabase Module    |\n";
 	cout << "|                                |\n";
-	cout << "|  1. Edit ISBN				  |\n";
-	cout << "|  2. Edit Title				  |\n";
+	cout << "|  1. Edit ISBN                  |\n";
+	cout << "|  2. Edit Title                 |\n";
 	cout << "|  3. Edit Author				  |\n";
 	cout << "|  4. Edit Publisher			  |\n";
-	cout << "|  5. Edit Quantity			  |\n";
-	cout << "|  6. Edit Retail Price		  |\n";
-	cout << "|  7. Edit Wholesale Price		  |\n";
-	cout << "|  8. Return to Inventory Menu   |\n";
+	cout << "|  5. Edit Date Added			  |\n";
+	cout << "|  6. Edit Quantity			  |\n";
+	cout << "|  7. Edit Retail Price		  |\n";
+	cout << "|  8. Edit Wholesale Price		  |\n";
+	cout << "|  9. Return to Inventory Menu   |\n";
 	cout << "|                                |\n";
 	cout << "|  Enter Your Choice: ";
 
@@ -127,7 +128,7 @@ int main()
 			Inventory i("books2.txt");
 			getline(cin, command);
 			int option = atoi(command.c_str());
-			if (option == 1) {
+			if (option == 1) { //Finding Book
 				cout << "\nEnter book to find: ";
 				string s;
 				getline(cin, s);
@@ -139,7 +140,7 @@ int main()
 						printInventoryEdit();
 						getline(cin, command);
 						option = atoi(command.c_str());
-						if (option >= Edit::ISBN || option < Edit::Wholesale) {
+						if (option >= Edit::ISBN && option <= Edit::Wholesale) {
 							cout << "\nEnter new book info: ";
 							getline(cin, s);
 							i.editBook(static_cast<Edit::Mode>(option), s);
@@ -150,6 +151,7 @@ int main()
 						cout << "\nBook deleted\n\n";
 					}
 				}
+				else cout << "\n\nBook not found\n\n";
 			}
 			else if (option == 2){
 				cout << "\nEnter book to add: \n";
