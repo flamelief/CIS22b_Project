@@ -94,16 +94,19 @@ int main()
 		if (tempOption == 1){
 			cout << endl << endl;
 			//cashier module
+			Cashier menu("books2.txt");
+			menu.printCashierMenu();
 		}
+		#ifndef DEBUG
 		else if (tempOption == 2){
 			cout << endl << endl;
 			printInventoryModule();
 			getline(cin, command);
 			int option = atoi(command.c_str());
-			InventoryDatabaseModule* inv = new InventoryDatabaseModule();
+			//InventoryDatabaseModule* inv = new InventoryDatabaseModule();
 			int tempOpt = 0;
 
-		while ( tempOpt != 5 )
+		/*	while ( tempOpt != 5 )
 			{
 				if (option == 1)
 					inv->lookUpBook();
@@ -113,17 +116,19 @@ int main()
 					inv->editBook();
 				else if (option == 4)
 					inv->deleteBook();
-				else if ( option == 5 ) 
+				else if ( option == 5 ) */
 				{
 					cout << "u r stupid";
 					break;
 				}
 			}
-			Inventory Database Module
+			//Inventory Database Module
+			
 		}
+		#endif // Debug
 		else if (tempOption == 3)
 		{
-			Report r("books2.txt");
+			Report r("books3.txt");
 			cout << endl << endl;
 			printReportOptions();
 			getline(cin, command);

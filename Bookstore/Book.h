@@ -20,9 +20,11 @@ class Book {
 	friend class Cashier;
 private:
 	string ISBN, title, author, publisher;
+	Price wholesale, retail;
 	int quantity;
 public:
-	Price wholesale, retail;
+	Book(); 
+
 	Date dateAdded;
 	void setISBN(string ISBN);
 	string getISBN() const;
@@ -53,6 +55,7 @@ public:
 	friend istream& operator>>(istream &input, Book &B);
 	friend ostream& operator<<(ostream &output, const Book &B);
 
+	#ifndef REPORT_DRIVER
 	//friend void Cashier::decrementBookQuant(vector <Book> &);
 
 	string getProperty(int);
@@ -71,6 +74,7 @@ public:
 		RET = 128,                    //it ended exactly at 8, so these values can be representated with 1 int
 		EVERYTHING = 255;
 	
+	#endif //REPORT_DRIVER
 };
 
 #endif //BOOKSTORE_BOOK_H

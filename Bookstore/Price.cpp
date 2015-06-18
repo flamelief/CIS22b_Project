@@ -22,7 +22,7 @@ istream& operator>>(istream &input, Price &P){
 	// Possibly prompt the user to enter price
 	// cout << "Please enter a price: ";
 	input >> price;
-	P.total_cents = int(price * 100);
+	P.total_cents = int(price * 100 + 0.5);
 	if (!(input && P.isValid())) {
 		input.setstate(ios::failbit);
 	}
@@ -80,5 +80,10 @@ Price& Price::operator+=(const Price &p) {
 	total_cents += p.total_cents;
 	return *this;
 }
+
+//Price Price::operator=(const int num)
+//{
+//	total_cents = num;
+//}
 
 
