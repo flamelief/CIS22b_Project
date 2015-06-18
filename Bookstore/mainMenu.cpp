@@ -118,8 +118,8 @@ int main()
 		if (tempOption == 1){
 			cout << endl << endl;
 			//cashier module
-			//Cashier menu("books2.txt");
-			//menu.printCashierMenu();
+			Cashier menu("books2.txt");
+			menu.printCashierMenu();
 		}
 		else if (tempOption == 2){
 			cout << endl << endl;
