@@ -24,6 +24,10 @@ bool Inventory::findBook(string titleISBN) {
 	return false;
 }
 
+Book Inventory::getCurBook(){
+	return *curBook;
+}
+
 Book Inventory::deleteBook() {
 	Book b;
 	if (curBook != books.end()) {
