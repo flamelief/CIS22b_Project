@@ -3,7 +3,7 @@ Title: Wiggle Wort
 Author: Mumbo Jumbo
 Publisher: Bill Hart
 Date Added: 01/01/0012
-Quantity On Hand: 234
+Quantity On Hand: 233
 Wholesale Cost: 19.00
 Retail Cost: 20.00
 ISBN: 1112223334445
@@ -222,3 +222,67 @@ Date Added: 01/02/0003
 Quantity On Hand: 33
 Wholesale Cost: 19.99
 Retail Cost: 22.200
+ISBN: 123
+Title: Willy
+Author: Billy
+Publisher: Bob
+Date Added: 01/09/0013
+Quantity On Hand: 3
+Wholesale Cost: 3.00
+Retail Cost: 10.00
+ISBN: 123
+Title: 1
+Author: 1
+Publisher: 1
+Date Added: 01/01/0001
+Quantity On Hand: 3
+Wholesale Cost: 12.00
+Retail Cost: 12.00
+ISBN: 1
+Title: 1
+Author: 1
+Publisher: 1
+Date Added: 01/01/0001
+Quantity On Hand: 45
+Wholesale Cost: 12.99
+Retail Cost: 11.11
+ISBN: 12344
+Title: Wat it do
+Author: Man
+Publisher: weeee
+Date Added: 01/01/1990
+Quantity On Hand: 12
+Wholesale Cost: 0.99
+Retail Cost: 111.11
+ISBN: 9999
+Title: www
+Author: www
+Publisher: wwww
+Date Added: 01/10/1990
+Quantity On Hand: 3
+Wholesale Cost: 10.99
+Retail Cost: 111.00
+ISBN: 1234
+Title: 321313
+Author: 321213
+Publisher: 21313
+Date Added: 01/01/0001
+Quantity On Hand: 4
+Wholesale Cost: 10.00
+Retail Cost: 10.00
+ISBN: 121212
+Title: 12121
+Author: 1212
+Publisher: 1212
+Date Added: 01/01/0001
+Quantity On Hand: 3
+Wholesale Cost: 12.99
+Retail Cost: 1.00
+ISBN: 11
+Title: 111
+Author: 111
+Publisher: 111
+Date Added: 01/01/0001
+Quantity On Hand: 3
+Wholesale Cost: 11.00
+Retail Cost: 12.00

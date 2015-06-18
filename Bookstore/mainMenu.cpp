@@ -119,8 +119,8 @@ int main()
 		if (tempOption == 1){
 			cout << endl << endl;
 			//cashier module
-			Cashier menu("books2.txt");
-			menu.printCashierMenu();
+			//Cashier menu("books2.txt");
+			//menu.printCashierMenu();
 		}
 		else if (tempOption == 2){
 			cout << endl << endl;
@@ -156,6 +156,7 @@ int main()
 			else if (option == 2){
 				cout << "\nEnter book to add: \n";
 				i.addBook();
+				cin.get();
 			}
 
 			
