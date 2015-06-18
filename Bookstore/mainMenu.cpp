@@ -93,26 +93,26 @@ int main()
 			//Cashier menu("books2.txt");
 			//menu.printCashierMenu();
 		}
-		#ifndef DEBUG
+		
 		else if (tempOption == 2){
 			cout << endl << endl;
 			printInventoryModule();
 			getline(cin, command);
 			int option = atoi(command.c_str());
-			//InventoryDatabaseModule* inv = new InventoryDatabaseModule();
+			Inventory* inv = new Inventory();
 			int tempOpt = 0;
 
-		/*	while ( tempOpt != 5 )
+			while ( tempOpt != 5 )
 			{
 				if (option == 1)
-					inv->lookUpBook();
+					inv->findBook();
 				else if (option == 2)
 					inv->addBook();
 				else if (option == 3)
 					inv->editBook();
 				else if (option == 4)
 					inv->deleteBook();
-				else if ( option == 5 ) */
+				else if ( option == 5 ) 
 				{
 					cout << "u r stupid";
 					break;
