@@ -3,8 +3,7 @@
 #include <iomanip>
 #include <string>
 #include "Report.h"
-#include "InventoryModule.h"
-#include "Interface.h"
+#include "Inventory.h"
 #include "Cashier.h"
 using namespace std;
 
@@ -91,8 +90,8 @@ int main()
 		if (tempOption == 1){
 			cout << endl << endl;
 			//cashier module
-			Cashier menu("books2.txt");
-			menu.printCashierMenu();
+			//Cashier menu("books2.txt");
+			//menu.printCashierMenu();
 		}
 		#ifndef DEBUG
 		else if (tempOption == 2){
@@ -130,8 +129,8 @@ int main()
 			printReportOptions();
 			getline(cin, command);
 			int option = atoi(command.c_str());
-			if (option >= Unsorted && option <= WholesaleList) {
-				r.printInventory(static_cast<Sort>(option));
+			if (option >= Sort::Unsorted && option <= Sort::WholesaleList) {
+				r.printInventory(static_cast<Sort::Mode>(option));
 			}
 		}
 		else if (tempOption == 4)
