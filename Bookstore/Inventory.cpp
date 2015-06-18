@@ -15,11 +15,6 @@ Inventory::~Inventory()
 {
 }
 
-template <typename fT, typename valT>
-void Inventory::editBook(fT f, valT val){
-		((*curBook).*f)(val);
-}
-
 bool Inventory::findBook(string titleISBN) {
 	for (curBook = books.begin(); curBook != books.end(); curBook++){
 		if (titleISBN == curBook->getTitle() || titleISBN == curBook->getISBN()) {

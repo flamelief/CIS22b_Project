@@ -12,7 +12,8 @@ int main(){
 	Inventory i("books2.txt");
 	//i.addBook();
 	i.findBook("w");
-	i.editBook(&Book::setPub, "nope");
+	//i.deleteBook();
+	i.editBook(&Book::setPub, "leslie");
 	return 0;
 }
 #endif //REPORT_DRIVER

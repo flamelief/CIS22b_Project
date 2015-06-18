@@ -14,8 +14,13 @@ public:
 	Inventory();
 	Inventory(string filename);
 	~Inventory();
-	template <typename fT, class valT>
-	inline void editBook(fT f, valT val);
+	template <typename fT, typename valT>
+	void editBook(fT f, valT val){
+		if (curBook != books.end()) {
+			((*curBook).*f)(val);
+		}
+	}
+
 	bool findBook(string);
 	void addBook();
 	void deleteBook();

@@ -209,7 +209,7 @@ Retail Cost: 20.00
 ISBN: 1
 Title: w
 Author: nope
-Publisher: nope
+Publisher: leslie
 Date Added: 01/01/0033
 Quantity On Hand: 2
 Wholesale Cost: 10.00
