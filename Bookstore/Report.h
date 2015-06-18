@@ -8,7 +8,7 @@ user wants and prints the results. If printInventory argument is the same as
 mode, the result will be printed only.
 */
 
-enum Sort { Unsorted = 1, Quantity, Date, Retail, Wholesale, RetailList, WholesaleList };
+enum Sort { Unsorted = 1, WholesaleList, RetailList, Quantity, Retail, Date, Wholesale };
 
 class Report : Interface{
 	Interface::books;
