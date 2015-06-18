@@ -34,6 +34,8 @@ void Price::setPrice(int dollars, int cents) {
 	total_cents += cents;
 }
 
+void Price::setPrice(const Price &p) { total_cents = p.total_cents; }
+
 int Price::getDollars() const {
 	return total_cents / 100;
 }

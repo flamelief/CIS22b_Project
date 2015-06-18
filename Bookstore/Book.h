@@ -48,6 +48,7 @@ public:
 	void setDate(Date dateAdded);
 	Date getDate() const;
 
+
 	Price getTotal() { return retail + retail * TAX; } // added here so that books can use this function
 
 	friend istream& operator>>(istream &input, Book &B);

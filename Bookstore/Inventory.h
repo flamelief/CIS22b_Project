@@ -1,8 +1,9 @@
 #pragma once
 #include "Interface.h"
+#include <sstream>
 
 namespace Edit {
-	enum  Mode { ISBN, Title, Author, Publisher, Date, Quantity, Retail, Wholesale };
+	enum  Mode { ISBN = 1, Title, Author, Publisher, Date, Quantity, Retail, Wholesale };
 }
 
 class Inventory :
@@ -14,16 +15,17 @@ public:
 	Inventory();
 	Inventory(string filename);
 	~Inventory();
-	template <typename fT, typename valT>
-	void editBook(fT f, valT val){
-		if (curBook != books.end()) {
-			((*curBook).*f)(val);
-		}
-	}
+	void editBook(Edit::Mode, string);
+	//template <typename fT, typename valT>
+	//void editBook(fT f, valT val){
+	//	if (curBook != books.end()) {
+	//		((*curBook).*f)(val);
+	//	}
+	//}
 
 	bool findBook(string);
 	void addBook();
-	void deleteBook();
+	Book deleteBook();
 	
 };
 

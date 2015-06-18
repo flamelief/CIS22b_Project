@@ -47,14 +47,42 @@ void printInventoryModule()
 	cout << "|                                |\n";
 	cout << "|  1. Look Up a Book             |\n";
 	cout << "|  2. Add a Book                 |\n";
-	cout << "|  3. Edit a Book's Record       |\n";
-	cout << "|  4. Delete a Book              |\n";
 	cout << "|  5. Return to the Main Menu    |\n";
 	cout << "|                                |\n";
 	cout << "|  Enter Your Choice: ";
 
 }
 
+void printInventoryFound()
+{
+	cout << "|================================|\n";
+	cout << "|     InventoryDatabase Module   |\n";
+	cout << "|           Book Found           |\n";
+	cout << "|                                |\n";
+	cout << "|     1. Edit Book               |\n";
+	cout << "|     2. Delete Book             |\n";
+	cout << "|     3. Return to Main Menu     |\n";
+	cout << "|                                |\n";
+	cout << "|  Enter Your Choice: ";
+}
+
+void printInventoryEdit()
+{
+	cout << "|================================|\n";
+	cout << "|     InventoryDatabase Module   |\n";
+	cout << "|                                |\n";
+	cout << "|  1. Edit ISBN				  |\n";
+	cout << "|  2. Edit Title				  |\n";
+	cout << "|  3. Edit Author				  |\n";
+	cout << "|  4. Edit Publisher			  |\n";
+	cout << "|  5. Edit Quantity			  |\n";
+	cout << "|  6. Edit Retail Price		  |\n";
+	cout << "|  7. Edit Wholesale Price		  |\n";
+	cout << "|  8. Return to Inventory Menu   |\n";
+	cout << "|                                |\n";
+	cout << "|  Enter Your Choice: ";
+
+}
 
 /*Pseudo Code
 -Initialize all the modules
@@ -93,35 +121,43 @@ int main()
 			//Cashier menu("books2.txt");
 			//menu.printCashierMenu();
 		}
-		#ifndef DEBUG
 		else if (tempOption == 2){
 			cout << endl << endl;
 			printInventoryModule();
+			Inventory i("books2.txt");
 			getline(cin, command);
 			int option = atoi(command.c_str());
-			//InventoryDatabaseModule* inv = new InventoryDatabaseModule();
-			int tempOpt = 0;
-
-		/*	while ( tempOpt != 5 )
-			{
-				if (option == 1)
-					inv->lookUpBook();
-				else if (option == 2)
-					inv->addBook();
-				else if (option == 3)
-					inv->editBook();
-				else if (option == 4)
-					inv->deleteBook();
-				else if ( option == 5 ) */
-				{
-					cout << "u r stupid";
-					break;
+			if (option == 1) {
+				cout << "\nEnter book to find: ";
+				string s;
+				getline(cin, s);
+				if (i.findBook(s)) {
+					printInventoryFound();
+					getline(cin, command);
+					option = atoi(command.c_str());
+					if (option == 1){
+						printInventoryEdit();
+						getline(cin, command);
+						option = atoi(command.c_str());
+						if (option >= Edit::ISBN || option < Edit::Wholesale) {
+							cout << "\nEnter new book info: ";
+							getline(cin, s);
+							i.editBook(static_cast<Edit::Mode>(option), s);
+						}
+					}
+					else if(option == 2){
+						i.deleteBook();
+						cout << "\nBook deleted\n\n";
+					}
 				}
 			}
-			//Inventory Database Module
+			else if (option == 2){
+				cout << "\nEnter book to add: \n";
+				i.addBook();
+			}
+
 			
 		}
-		#endif // Debug
 		else if (tempOption == 3)
 		{
 			Report r("books3.txt");

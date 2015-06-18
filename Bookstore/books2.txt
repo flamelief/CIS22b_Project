@@ -184,7 +184,7 @@ Wholesale Cost: 15.00
 Retail Cost: 20.00
 ISBN: 9781501100079
 Title: Finders Keepers
-Author: Stephen King
+Author: Bo Diddly
 Publisher: Scribner
 Date Added: 05/28/2015
 Quantity On Hand: 5
@@ -214,3 +214,11 @@ Date Added: 05/28/2015
 Quantity On Hand: 2
 Wholesale Cost: 17.00
 Retail Cost: 20.00
+ISBN: 123
+Title: Real Talk
+Author: D'Angelo
+Publisher: Who
+Date Added: 01/02/0003
+Quantity On Hand: 33
+Wholesale Cost: 19.99
+Retail Cost: 22.200

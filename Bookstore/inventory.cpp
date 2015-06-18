@@ -24,10 +24,13 @@ bool Inventory::findBook(string titleISBN) {
 	return false;
 }
 
-void Inventory::deleteBook() {
+Book Inventory::deleteBook() {
+	Book b;
 	if (curBook != books.end()) {
+		b = *curBook;
 		books.erase(curBook);
 	}
+	return b;
 }
 
 Book Inventory::getBook() {
@@ -62,4 +65,43 @@ Book Inventory::getBook() {
 
 void Inventory::addBook() {
 	pushBook(getBook());
+}
+
+void Inventory::editBook(Edit::Mode mode, string input){
+	istringstream is(input);
+	string str;
+	Price p;
+	Date d;
+	int q;
+	switch (mode){
+	case Edit::ISBN:
+		curBook->setISBN(input);
+		break;
+	case Edit::Title:
+		curBook->setTitle(input);
+		break;
+	case Edit::Author:
+		curBook->setAuthor(input);
+		break;
+	case Edit::Publisher:
+		curBook->setPub(input);
+		break;
+	case Edit::Date:
+		is >> d;
+		curBook->setDate(d);
+		break;
+	case Edit::Quantity:
+		q = atoi(input.c_str());
+		curBook->setQuant(q);
+		break;
+	case Edit::Retail:
+		is >> p;
+		curBook->setWhole(p);
+		break;
+	case Edit::Wholesale:
+		is >> p;
+		curBook->setRetail(p);
+		break;
+	}
+
 }

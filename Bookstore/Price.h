@@ -19,6 +19,7 @@ public:
 	friend istream& operator>>(istream &input, Price &P);
 	inline int getDollars() const;
 	inline int getCents() const;
+	void setPrice(const Price &p);
 	void setPrice(int dollars, int cents);
 	inline bool isValid();
 	Price operator*(const double &);
