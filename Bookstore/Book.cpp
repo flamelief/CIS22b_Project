@@ -6,6 +6,7 @@
 
 Book::Book() 
 {
+	ISBN = "0000000000000";
 	title = "Unknown Book";
 	quantity = 0;
 }

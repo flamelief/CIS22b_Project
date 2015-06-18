@@ -11,7 +11,7 @@ Title: The Boy Who Harnessed the Wind: Creating Currents of Electricity and Hope
 Author: William Kamkwamba, Bryan Mealer
 Publisher: HarperCollins Publishers
 Date Added: 05/28/1990
-Quantity On Hand: 1
+Quantity On Hand: 0
 Wholesale Cost: 11.00
 Retail Cost: 12.00
 ISBN: 9781926760681
@@ -19,7 +19,7 @@ Title: I Wrote This for You
 Author:  pleasefindthis
 Publisher: Central Avenue Marketing, Ltd.
 Date Added: 05/28/2015
-Quantity On Hand: 10
+Quantity On Hand: 7
 Wholesale Cost: 15.00
 Retail Cost: 19.00
 ISBN: 9781476746586
@@ -27,7 +27,7 @@ Title: All the Light We Cannot See
 Author: Anthony Doerr
 Publisher: Scribner
 Date Added: 05/28/2015
-Quantity On Hand: 7
+Quantity On Hand: 5
 Wholesale Cost: 15.00
 Retail Cost: 21.00
 ISBN: 9780679644422
@@ -43,7 +43,7 @@ Title: The Forgotten Room
 Author: Lincoln Child
 Publisher: Knopf Doubleday Publishing Group
 Date Added: 05/28/2015
-Quantity On Hand: 6
+Quantity On Hand: 1
 Wholesale Cost: 11.00
 Retail Cost: 18.00
 ISBN: 9780316380102
@@ -67,7 +67,7 @@ Title: The Art of War
 Author: Sun Tzu
 Publisher: Filiquarian Publishing
 Date Added: 05/28/2015
-Quantity On Hand: 5
+Quantity On Hand: 0
 Wholesale Cost: 2.00
 Retail Cost: 4.00
 ISBN: 9780062438577
