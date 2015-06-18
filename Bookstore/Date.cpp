@@ -12,6 +12,8 @@ int Date::getMonth() const { return month; }
 void Date::setMonth(int m) { month = m; }
 int Date::getYear() const { return year; }
 void Date::setYear(int y) { year = y; }
+
+
 bool Date::isValid() {
 	if (year >= 0 && month >= Jan && month <= Dec){
 		if (day >= 1) {
@@ -43,7 +45,7 @@ istream& operator>>(istream &input, Date &D){
 	return input;
 }
 
-// Date compare
+// Date compare: year, month, date
 bool Date::operator>(const Date& date)
 {
 	if (year < date.year) return true;
