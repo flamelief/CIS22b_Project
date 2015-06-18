@@ -22,7 +22,7 @@ istream& operator>>(istream &input, Price &P){
 	// Possibly prompt the user to enter price
 	// cout << "Please enter a price: ";
 	input >> price;
-	P.total_cents = int(price * 100);
+	P.total_cents = int(price * 100 + 0.5);
 	if (!(input && P.isValid())) {
 		input.setstate(ios::failbit);
 	}
@@ -59,7 +59,8 @@ bool operator>(const Price &p1, const Price &p2)
 // Return a multiplication between a Price object and a double as Price
 Price Price::operator * (const double &right)
 {
-	total_cents *= static_cast<int>(right);
+	int temp = int(right + 0.5);
+	total_cents *= temp;
 	return *this;
 }
 
