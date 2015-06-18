@@ -1,3 +1,19 @@
+ISBN: 9781501100079
+Title: Finders Keepers
+Author: Stephen King
+Publisher: Scribner
+Date Added: 05/27/1990
+Quantity On Hand: 5
+Wholesale Cost: 19.00
+Retail Cost: 30.00
+ISBN: 9780061730337
+Title: The Boy Who Harnessed the Wind: Creating Currents of Electricity and Hope
+Author: William Kamkwamba, Bryan Mealer
+Publisher: HarperCollins Publishers
+Date Added: 05/28/1990
+Quantity On Hand: 1
+Wholesale Cost: 11.00
+Retail Cost: 12.00
 ISBN: 9781926760681
 Title: I Wrote This for You
 Author:  pleasefindthis
@@ -30,14 +46,6 @@ Date Added: 05/28/2015
 Quantity On Hand: 6
 Wholesale Cost: 11.00
 Retail Cost: 18.00
-ISBN: 9781501100079
-Title: Finders Keepers
-Author: Stephen King
-Publisher: Scribner
-Date Added: 05/27/1990
-Quantity On Hand: 5
-Wholesale Cost: 19.00
-Retail Cost: 30.00
 ISBN: 9780316380102
 Title: Brain Maker: The Power of Gut Microbes to Heal and Protect Your Brain-for Life
 Author: David Perlmutter, Kristin Loberg (With)
@@ -165,14 +173,6 @@ Publisher: Knopf Doubleday Publishing Group
 Date Added: 05/28/2015
 Quantity On Hand: 2
 Wholesale Cost: 9.00
-Retail Cost: 12.00
-ISBN: 9780061730337
-Title: The Boy Who Harnessed the Wind: Creating Currents of Electricity and Hope
-Author: William Kamkwamba, Bryan Mealer
-Publisher: HarperCollins Publishers
-Date Added: 05/28/1990
-Quantity On Hand: 1
-Wholesale Cost: 11.00
 Retail Cost: 12.00
 ISBN: 9780062190376
 Title: Seveneves

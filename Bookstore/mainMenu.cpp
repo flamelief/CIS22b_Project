@@ -128,7 +128,7 @@ int main()
 		#endif // Debug
 		else if (tempOption == 3)
 		{
-			Report r("books2.txt");
+			Report r("books3.txt");
 			cout << endl << endl;
 			printReportOptions();
 			getline(cin, command);
