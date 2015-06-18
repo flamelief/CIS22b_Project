@@ -2,7 +2,7 @@
 #include "Interface.h"
 
 namespace Edit {
-	enum  Mode { ISBN, Author, Date, Retail, Wholesale, RetailList, WholesaleList };
+	enum  Mode { ISBN, Title, Author, Publisher, Date, Quantity, Retail, Wholesale };
 }
 
 class Inventory :
@@ -14,10 +14,13 @@ public:
 	Inventory();
 	Inventory(string filename);
 	~Inventory();
-	bool findBook(string);
-	void deleteBook();
 	template <typename fT, class valT>
-	void editBook(fT, valT);
+	void editBook(fT f, valT val){
+		((*curBook).*f)(val);
+	}
+	bool findBook(string);
 	void addBook();
+	void deleteBook();
+	
 };
 

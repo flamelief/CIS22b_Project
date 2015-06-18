@@ -54,7 +54,7 @@ public:
 	friend ostream& operator<<(ostream &output, const Book &B);
 
 	//friend void Cashier::decrementBookQuant(vector <Book> &);
-
+	/*
 	string getProperty(int);
 	string toString(int);
 
@@ -70,7 +70,7 @@ public:
 		WCOST = 64,
 		RET = 128,                    //it ended exactly at 8, so these values can be representated with 1 int
 		EVERYTHING = 255;
-	
+	*/
 };
 
 #endif //BOOKSTORE_BOOK_H

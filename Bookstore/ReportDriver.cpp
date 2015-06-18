@@ -10,8 +10,9 @@ int main(){
 	//Report r("books2.txt");
 	//r.printInventory(RetailList);
 	Inventory i("books2.txt");
-	i.deleteBook();
-
+	//i.addBook();
+	i.findBook("w");
+	i.editBook(&Book::setPub, "nope");
 	return 0;
 }
 #endif //REPORT_DRIVER

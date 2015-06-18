@@ -198,3 +198,19 @@ Date Added: 05/28/2015
 Quantity On Hand: 2
 Wholesale Cost: 17.00
 Retail Cost: 20.00
+ISBN: 
+Title: Wiggle Wort
+Author: Mumbo Jumbo
+Publisher: Bill Hart
+Date Added: 01/01/0012
+Quantity On Hand: 234
+Wholesale Cost: 19.00
+Retail Cost: 20.00
+ISBN: 1
+Title: w
+Author: nope
+Publisher: nope
+Date Added: 01/01/0033
+Quantity On Hand: 2
+Wholesale Cost: 10.00
+Retail Cost: 24.00

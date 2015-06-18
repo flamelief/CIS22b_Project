@@ -30,22 +30,23 @@ void Inventory::deleteBook() {
 	}
 }
 
-template <typename fT, class valT>
-void Inventory::editBook(fT, valT) {
-	curBook->(*ft)(valT);
-}
-
 Book Inventory::getBook() {
 	Book b;
 	string s;
 	Price p;
 	Date d;
 	int q;
-	cout << "Title: ", cin >> s;
+	cout << "ISBN: ";
+	getline(cin, s);
+	b.setISBN(s);
+	cout << "Title: ";
+	getline(cin, s);
 	b.setTitle(s);
-	cout << "Author: ", cin >> s;
+	cout << "Author: ";
+	getline(cin, s);
 	b.setAuthor(s);
-	cout << "Publisher: ", cin >> s;
+	cout << "Publisher: ";
+	getline(cin, s);
 	b.setPub(s);
 	cout << "Date Added: ", cin >> d;
 	b.setDate(d);
@@ -62,4 +63,3 @@ Book Inventory::getBook() {
 void Inventory::addBook() {
 	pushBook(getBook());
 }
-
