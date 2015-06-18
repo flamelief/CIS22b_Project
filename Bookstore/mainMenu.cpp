@@ -73,12 +73,12 @@ void printInventoryEdit()
 	cout << "|                                |\n";
 	cout << "|  1. Edit ISBN                  |\n";
 	cout << "|  2. Edit Title                 |\n";
-	cout << "|  3. Edit Author				  |\n";
-	cout << "|  4. Edit Publisher			  |\n";
-	cout << "|  5. Edit Date Added			  |\n";
-	cout << "|  6. Edit Quantity			  |\n";
-	cout << "|  7. Edit Retail Price		  |\n";
-	cout << "|  8. Edit Wholesale Price		  |\n";
+	cout << "|  3. Edit Author                |\n";
+	cout << "|  4. Edit Publisher             |\n";
+	cout << "|  5. Edit Date Added            |\n";
+	cout << "|  6. Edit Quantity              |\n";
+	cout << "|  7. Edit Retail Price          |\n";
+	cout << "|  8. Edit Wholesale Price       |\n";
 	cout << "|  9. Return to Inventory Menu   |\n";
 	cout << "|                                |\n";
 	cout << "|  Enter Your Choice: ";
