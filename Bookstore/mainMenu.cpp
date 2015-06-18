@@ -47,7 +47,7 @@ void printInventoryModule()
 	cout << "|                                |\n";
 	cout << "|  1. Look Up a Book             |\n";
 	cout << "|  2. Add a Book                 |\n";
-	cout << "|  5. Return to the Main Menu    |\n";
+	cout << "|  3. Return to the Main Menu    |\n";
 	cout << "|                                |\n";
 	cout << "|  Enter Your Choice: ";
 
@@ -170,6 +170,7 @@ int main()
 			int option = atoi(command.c_str());
 			if (option >= Sort::Unsorted && option <= Sort::WholesaleList) {
 				r.printInventory(static_cast<Sort::Mode>(option));
+				cout << endl;
 			}
 		}
 		else if (tempOption == 4)
