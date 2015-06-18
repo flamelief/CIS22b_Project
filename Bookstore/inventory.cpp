@@ -1,39 +1,65 @@
-#ifdef DEBUG 
-#include <iostream>
-#include <iomanip>
-#include <string>
+#include "Inventory.h"
 
-using namespace std;
+vector<Book>::iterator Inventory::curBook;
 
-int main()
+Inventory::Inventory(string filename) : Interface(filename)
 {
-	int choice;
-	cout << "|================================|" << endl;
-	cout << "|      Serendipity Booksellers   |" << endl;
-	cout << "|        Inventory Database      |" << endl;
-	cout << "|                                |" << endl;
-	cout << "|   1. Look Up A Book            |" << endl;
-	cout << "|   2. Add a Book                |" << endl;
-	cout << "|   3. Edit a Book's Record      |" << endl;
-	cout << "|   4. Delete a Book             |" << endl;
-	cout << "|   5. Return to the Main Menu   |" << endl;
-	cout << "|                                |" << endl;
-	cout << "|      Enter Your Choice:        | ";
-	cin >> choice;
+	curBook = books.end();
+}
 
+Inventory::Inventory() {
+	curBook = books.end();
+}
 
-	while (!readChar(cInput) || (cInput < '1') || (cInput > '5')) {
-		cout << "\nPlease enter a number between 1 and 5: ";
+Inventory::~Inventory()
+{
+}
+
+bool Inventory::findBook(string titleISBN) {
+	for (curBook = books.begin(); curBook != books.end(); curBook++){
+		if (titleISBN == curBook->getTitle() || titleISBN == curBook->getISBN()) {
+			return true;
+		}
 	}
-	if (cInput == '1')
-		lookUpBook();
-	else if (cInput == '2')
-		addBook();
-	else if (cInput == '3')
-		editBook();
-	else if (cInput == '4')
-		deleteBook();
-	{
-		cout << " Did not Enter the Given choices" << endl;
-		system("pause");
+	return false;
+}
+
+void Inventory::deleteBook() {
+	if (curBook != books.end()) {
+		books.erase(curBook);
 	}
+}
+
+Book Inventory::getBook() {
+	Book b;
+	string s;
+	Price p;
+	Date d;
+	int q;
+	cout << "ISBN: ";
+	getline(cin, s);
+	b.setISBN(s);
+	cout << "Title: ";
+	getline(cin, s);
+	b.setTitle(s);
+	cout << "Author: ";
+	getline(cin, s);
+	b.setAuthor(s);
+	cout << "Publisher: ";
+	getline(cin, s);
+	b.setPub(s);
+	cout << "Date Added: ", cin >> d;
+	b.setDate(d);
+	cout << "Quantity on hand: ", cin >> q;
+	b.setQuant(q);
+	cout << "Wholesale cost: ", cin >> p;
+	b.setWhole(p);
+	cout << "Retail cost: ", cin >> p;
+	b.setRetail(p);
+
+	return b;
+}
+
+void Inventory::addBook() {
+	pushBook(getBook());
+}

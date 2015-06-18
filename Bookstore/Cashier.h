@@ -1,5 +1,4 @@
 // Specification File for Cashier Class
-#ifndef REPORT_DRIVER
 #ifndef CASHIER_H
 #define CASHIER_H
 
@@ -29,4 +28,3 @@ public:
 										 
 };
 #endif
-#endif //REPORT_DRIVER

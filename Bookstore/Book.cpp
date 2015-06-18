@@ -11,10 +11,10 @@ Book::Book()
 }
 
 void Book::setISBN(string ISBN) { this->ISBN = ISBN; }
-string Book::getISBN() const { return ISBN; }
+string Book::getISBN() { return ISBN; }
 
 void Book::setTitle(string title) { this->title = title; }
-string Book::getTitle() const { return title; }
+string Book::getTitle() { return title; }
 
 void Book::setAuthor(string author) { this->author = author; }
 string Book::getAuthor() const { return author; }
@@ -36,7 +36,7 @@ Date Book::getDate() const { return dateAdded; }
 
 istream& operator>>(istream &input, Book &B){
 	input.ignore(256, ':'), input.get();
-	input >> B.ISBN;
+	getline(input, B.ISBN);
 	input.ignore(256, ':'), input.get();
 	getline(input, B.title);
 	input.ignore(256, ':'), input.get();

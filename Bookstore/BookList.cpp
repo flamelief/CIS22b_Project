@@ -1,3 +1,4 @@
+#ifndef REPORT_DRIVER
 #define _CRT_SECURE_NO_WARNINGS
 #include "BookList.h"
 #include <fstream>
@@ -114,3 +115,4 @@ void BookList::partialFindBooks(int info, string s, vector<Book*>&tempV)
 			tempV.push_back(&bookList[i]);
 	}
 }
+#endif //REPORT_DRIVER

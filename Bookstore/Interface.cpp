@@ -15,7 +15,6 @@ Interface::Interface(string name)
 			file >> temp;
 			if (file) pushBook(temp);
 		}
-		//cout << books.size() << endl;
 		file.close();
 	}
 }

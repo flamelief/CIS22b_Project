@@ -1,16 +1,72 @@
-ISBN: 9781501100079
-Title: Finders Keepers
-Author: Stephen King
-Publisher: Scribner
-Date Added: 05/27/1990
+ISBN: 9780316230810
+Title: We need new names
+Author: Bulawayo, NoViolet
+Publisher: Little, Brown and Company
+Date Added: 05/28/2015
+Quantity On Hand: 3
+Wholesale Cost: 9.97
+Retail Cost: 15.00
+ISBN: 9780062190376
+Title: Seveneves
+Author: Neal Stephenson
+Publisher: HarperCollins Publishers
+Date Added: 05/28/2015
+Quantity On Hand: 1
+Wholesale Cost: 17.00
+Retail Cost: 21.00
+ISBN: 9780385531405
+Title: The Forgotten Room
+Author: Lincoln Child
+Publisher: Knopf Doubleday Publishing Group
+Date Added: 05/28/2015
+Quantity On Hand: 6
+Wholesale Cost: 11.00
+Retail Cost: 18.00
+ISBN: 9780316176538
+Title: A God in Ruins
+Author: Kate Atkinson
+Publisher: Little, Brown and Company
+Date Added: 05/28/2015
+Quantity On Hand: 2
+Wholesale Cost: 15.00
+Retail Cost: 17.00
+ISBN: 9780399167324
+Title: Piranha (Oregon Files Series #10)
+Author: Clive Cussler, Boyd Morrison
+Publisher: Penguin Publishing Group
+Date Added: 05/28/2015
+Quantity On Hand: 1
+Wholesale Cost: 13.00
+Retail Cost: 21.00
+ISBN: 9780789329202
+Title: Kim Kardashian West: Selfish
+Author: Kim Kardashian West
+Publisher: Rizzoli
+Date Added: 05/28/2015
+Quantity On Hand: 3
+Wholesale Cost: 12.00
+Retail Cost: 20.00
+ISBN: 9781599869773
+Title: The Art of War
+Author: Sun Tzu
+Publisher: Filiquarian Publishing
+Date Added: 05/28/2015
 Quantity On Hand: 5
-Wholesale Cost: 19.00
-Retail Cost: 30.00
+Wholesale Cost: 2.00
+Retail Cost: 4.00
+ISBN: 9780375725609
+Title: The Devil in the White City: Murder, Magic, and Madness at the Fair That Changed America
+Author: Erik Larson
+Publisher: Knopf Doubleday Publishing Group
+Date Added: 05/28/2015
+Quantity On Hand: 2
+Wholesale Cost: 9.00
+Retail Cost: 12.00
 ISBN: 9780061730337
 Title: The Boy Who Harnessed the Wind: Creating Currents of Electricity and Hope
 Author: William Kamkwamba, Bryan Mealer
 Publisher: HarperCollins Publishers
-Date Added: 05/28/1990
+Date Added: 05/28/2015
 Quantity On Hand: 1
 Wholesale Cost: 11.00
 Retail Cost: 12.00
@@ -22,70 +78,6 @@ Date Added: 05/28/2015
 Quantity On Hand: 10
 Wholesale Cost: 15.00
 Retail Cost: 19.00
-ISBN: 9781476746586
-Title: All the Light We Cannot See
-Author: Anthony Doerr
-Publisher: Scribner
-Date Added: 05/28/2015
-Quantity On Hand: 7
-Wholesale Cost: 15.00
-Retail Cost: 21.00
-ISBN: 9780679644422
-Title: My Paris Dream: An Education in Style, Slang, and Seduction in the Great City on the Seine
-Author: Kate Betts
-Publisher: Random House Publishing Group
-Date Added: 05/28/2015
-Quantity On Hand: 7
-Wholesale Cost: 14.00
-Retail Cost: 19.00
-ISBN: 9780385531405
-Title: The Forgotten Room
-Author: Lincoln Child
-Publisher: Knopf Doubleday Publishing Group
-Date Added: 05/28/2015
-Quantity On Hand: 6
-Wholesale Cost: 11.00
-Retail Cost: 18.00
-ISBN: 9780316380102
-Title: Brain Maker: The Power of Gut Microbes to Heal and Protect Your Brain-for Life
-Author: David Perlmutter, Kristin Loberg (With)
-Publisher: Little, Brown and Company
-Date Added: 05/28/2015
-Quantity On Hand: 5
-Wholesale Cost: 16.00
-Retail Cost: 28.00
-ISBN: 9781780671062
-Title: Secret Garden: An Inky Treasure Hunt and Coloring Book
-Author: Johanna Basford
-Publisher: King, Laurence Publishing
-Date Added: 05/28/2015
-Quantity On Hand: 5
-Wholesale Cost: 11.00
-Retail Cost: 16.00
-ISBN: 9781599869773
-Title: The Art of War
-Author: Sun Tzu
-Publisher: Filiquarian Publishing
-Date Added: 05/28/2015
-Quantity On Hand: 5
-Wholesale Cost: 2.00
-Retail Cost: 4.00
-ISBN: 9780062438577
-Title: Secondhand Souls (Signed Book)
-Author: Christopher Moore
-Publisher: HarperCollins Publishers
-Date Added: 05/28/2015
-Quantity On Hand: 4
-Wholesale Cost: 20.00
-Retail Cost: 27.00
-ISBN: 9780399167737
-Title: Peanut Butter & Cupcake
-Author:  Terry Border, Terry Border (Illustrator)
-Publisher: Penguin Young Readers Group
-Date Added: 05/28/2015
-Quantity On Hand: 4
-Wholesale Cost: 15.00
-Retail Cost: 21.00
 ISBN: 9780316247764
 Title: Hold Still: A Memoir with Photographs
 Author: Sally Mann
@@ -94,69 +86,21 @@ Date Added: 05/28/2015
 Quantity On Hand: 4
 Wholesale Cost: 17.00
 Retail Cost: 20.00
-ISBN: 9780789329202
-Title: Kim Kardashian West: Selfish
-Author: Kim Kardashian West
-Publisher: Rizzoli
+ISBN: 9780679644422
+Title: My Paris Dream: An Education in Style, Slang, and Seduction in the Great City on the Seine
+Author: Kate Betts
+Publisher: Random House Publishing Group
 Date Added: 05/28/2015
-Quantity On Hand: 3
-Wholesale Cost: 12.00
-Retail Cost: 20.00
-ISBN: 9781941631232
-Title: The Doing Good Model: Activate Your Goodness in Business
-Author: Shari Arison
-Publisher: BenBella Books, Inc.
-Date Added: 05/28/2015
-Quantity On Hand: 3
-Wholesale Cost: 15.00
-Retail Cost: 20.00
-ISBN: 9781627792417
-Title: Killing Reagan: The Violent Assault That Changed a Presidency
-Author: Bill O'Reilly, Martin Dugard
-Publisher: Holt, Henry & Company, Inc.
-Date Added: 05/28/2015
-Quantity On Hand: 3
+Quantity On Hand: 7
 Wholesale Cost: 14.00
-Retail Cost: 18.00
-ISBN: 9781476728742
-Title: The Wright Brothers
-Author: David McCullough
-Publisher: Simon & Schuster
-Date Added: 05/28/2015
-Quantity On Hand: 3
-Wholesale Cost: 14.00
-Retail Cost: 18.00
-ISBN: 9780316230810
-Title: We need new names
-Author: Bulawayo, NoViolet
-Publisher: Little, Brown and Company
-Date Added: 05/28/2015
-Quantity On Hand: 3
-Wholesale Cost: 9.00
-Retail Cost: 15.00
-ISBN: 9781595620156
-Title: StrengthsFinder 2.0
-Author: Tom Rath
-Publisher: Gallup Press
-Date Added: 05/28/2015
-Quantity On Hand: 2
-Wholesale Cost: 17.00
-Retail Cost: 20.00
-ISBN: 9781594633669
-Title: The Girl on the Train
-Author: Paula Hawkins
-Publisher: Penguin Publishing Group
-Date Added: 05/28/2015
-Quantity On Hand: 2
-Wholesale Cost: 15.00
 Retail Cost: 19.00
-ISBN: 9780316176538
-Title: A God in Ruins
-Author: Kate Atkinson
-Publisher: Little, Brown and Company
+ISBN: 9780062409850
+Title: Go Set a Watchman
+Author: Harper Lee
+Publisher: Harper Publishing
 Date Added: 05/28/2015
-Quantity On Hand: 2
-Wholesale Cost: 15.00
+Quantity On Hand: 1
+Wholesale Cost: 16.00
 Retail Cost: 17.00
 ISBN: 9780451474841
 Title: The 22-Day Revolution: The Plant-Based Program That Will Transform Your Body, Reset Your Habits, and Change Your Life
@@ -166,35 +110,107 @@ Date Added: 05/28/2015
 Quantity On Hand: 2
 Wholesale Cost: 11.00
 Retail Cost: 17.00
-ISBN: 9780375725609
-Title: The Devil in the White City: Murder, Magic, and Madness at the Fair That Changed America
-Author: Erik Larson
-Publisher: Knopf Doubleday Publishing Group
+ISBN: 9781627792417
+Title: Killing Reagan: The Violent Assault That Changed a Presidency
+Author: Bill O'Reilly, Martin Dugard
+Publisher: Holt, Henry & Company, Inc.
 Date Added: 05/28/2015
-Quantity On Hand: 2
-Wholesale Cost: 9.00
-Retail Cost: 12.00
-ISBN: 9780062190376
-Title: Seveneves
-Author: Neal Stephenson
+Quantity On Hand: 3
+Wholesale Cost: 14.00
+Retail Cost: 18.00
+ISBN: 9781780671062
+Title: Secret Garden: An Inky Treasure Hunt and Coloring Book
+Author: Johanna Basford
+Publisher: King, Laurence Publishing
+Date Added: 05/28/2015
+Quantity On Hand: 5
+Wholesale Cost: 11.00
+Retail Cost: 16.00
+ISBN: 9780316380102
+Title: Brain Maker: The Power of Gut Microbes to Heal and Protect Your Brain-for Life
+Author: David Perlmutter, Kristin Loberg (With)
+Publisher: Little, Brown and Company
+Date Added: 05/28/2015
+Quantity On Hand: 5
+Wholesale Cost: 16.00
+Retail Cost: 28.00
+ISBN: 9780062438577
+Title: Secondhand Souls (Signed Book)
+Author: Christopher Moore
 Publisher: HarperCollins Publishers
 Date Added: 05/28/2015
-Quantity On Hand: 1
-Wholesale Cost: 17.00
+Quantity On Hand: 4
+Wholesale Cost: 20.00
+Retail Cost: 27.00
+ISBN: 9781476728742
+Title: The Wright Brothers
+Author: David McCullough
+Publisher: Simon & Schuster
+Date Added: 05/28/2015
+Quantity On Hand: 3
+Wholesale Cost: 14.00
+Retail Cost: 18.00
+ISBN: 9781476746586
+Title: All the Light We Cannot See
+Author: Anthony Doerr
+Publisher: Scribner
+Date Added: 05/28/2015
+Quantity On Hand: 7
+Wholesale Cost: 15.00
 Retail Cost: 21.00
-ISBN: 9780399167324
-Title: Piranha (Oregon Files Series #10)
-Author: Clive Cussler, Boyd Morrison
+ISBN: 9781941631232
+Title: The Doing Good Model: Activate Your Goodness in Business
+Author: Shari Arison
+Publisher: BenBella Books, Inc.
+Date Added: 05/28/2015
+Quantity On Hand: 3
+Wholesale Cost: 15.00
+Retail Cost: 20.00
+ISBN: 9781501100079
+Title: Finders Keepers
+Author: Stephen King
+Publisher: Scribner
+Date Added: 05/28/2015
+Quantity On Hand: 5
+Wholesale Cost: 19.00
+Retail Cost: 30.00
+ISBN: 9781594633669
+Title: The Girl on the Train
+Author: Paula Hawkins
 Publisher: Penguin Publishing Group
 Date Added: 05/28/2015
-Quantity On Hand: 1
-Wholesale Cost: 13.00
-Retail Cost: 21.00
-ISBN: 9780062409850
-Title: Go Set a Watchman
-Author: Harper Lee
-Publisher: Harper Publishing
+Quantity On Hand: 2
+Wholesale Cost: 15.00
+Retail Cost: 19.00
+ISBN: 9780399167737
+Title: Peanut Butter & Cupcake
+Author:  Terry Border, Terry Border (Illustrator)
+Publisher: Penguin Young Readers Group
 Date Added: 05/28/2015
-Quantity On Hand: 1
-Wholesale Cost: 16.00
-Retail Cost: 17.00
+Quantity On Hand: 4
+Wholesale Cost: 15.00
+Retail Cost: 21.00
+ISBN: 9781595620156
+Title: StrengthsFinder 2.0
+Author: Tom Rath
+Publisher: Gallup Press
+Date Added: 05/28/2015
+Quantity On Hand: 2
+Wholesale Cost: 17.00
+Retail Cost: 20.00
+ISBN: 
+Title: Wiggle Wort
+Author: Mumbo Jumbo
+Publisher: Bill Hart
+Date Added: 01/01/0012
+Quantity On Hand: 234
+Wholesale Cost: 19.00
+Retail Cost: 20.00
+ISBN: 1
+Title: w
+Author: nope
+Publisher: leslie
+Date Added: 01/01/0033
+Quantity On Hand: 2
+Wholesale Cost: 10.00
+Retail Cost: 24.00
