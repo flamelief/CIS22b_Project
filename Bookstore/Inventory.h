@@ -15,9 +15,7 @@ public:
 	Inventory(string filename);
 	~Inventory();
 	template <typename fT, class valT>
-	void editBook(fT f, valT val){
-		((*curBook).*f)(val);
-	}
+	inline void editBook(fT f, valT val);
 	bool findBook(string);
 	void addBook();
 	void deleteBook();
