@@ -26,16 +26,17 @@ void  printMain()
 // function for report menu display
 void printReportOptions()
 {
-	cout << "|================================|\n";
-	cout << "|    Serendipity Booksellers     |\n";
-	cout << "|             Reports            |\n";
-	cout << "|  1. Inventory Listing          |\n";
-	cout << "|  2. Inventory Wholesale Value  |\n";
-	cout << "|  3. Inventory Retail Value     |\n";
-	cout << "|  4. Listing by Quantity        |\n";
-	cout << "|  5. Listing by Cost            |\n";
-	cout << "|  6. Listing by Age             |\n";
-	cout << "|  7. Return to Main Menu        |\n";
+	cout << "|==================================|\n";
+	cout << "|    Serendipity Booksellers       |\n";
+	cout << "|             Reports              |\n";
+	cout << "|  1. Inventory Listing            |\n";
+	cout << "|  2. Listing by Quantity          |\n";
+	cout << "|  3. Listing by Age               |\n";
+	cout << "|  4. Inventory by Retail Value    |\n";
+	cout << "|  5. Inventory by Wholesale Value |\n";
+	cout << "|  6. Retail Value Listing         |\n";
+	cout << "|  7. Wholesale Value Listing      |\n";
+	cout << "|  8. Return to Main Menu          |\n";
 	cout << endl;
 	cout << "|  Enter Your Choice: ";
 }
@@ -67,8 +68,6 @@ void printInventoryModule()
 int main()
 {
 
-
-
 	//inline function
 	void printMain();
 	void printReportOptions();
@@ -82,8 +81,6 @@ int main()
 		getline(cin, command);
 
 		tempOption = static_cast<int>(atoi(command.c_str()));
-
-
 
 		if ((tempOption< 1) || (tempOption> 4))
 		{
@@ -133,8 +130,9 @@ int main()
 			printReportOptions();
 			getline(cin, command);
 			int option = atoi(command.c_str());
-			Sort d = static_cast<Sort>(option);
-			r.printInventory(d);
+			if (option >= Unsorted && option <= WholesaleList) {
+				r.printInventory(static_cast<Sort>(option));
+			}
 		}
 		else if (tempOption == 4)
 		{
