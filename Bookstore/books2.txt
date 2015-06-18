@@ -286,3 +286,19 @@ Date Added: 01/01/0001
 Quantity On Hand: 3
 Wholesale Cost: 11.00
 Retail Cost: 12.00
+ISBN: Nipple
+Title: Nips
+Author: Whips
+Publisher: Quips
+Date Added: 01/01/0001
+Quantity On Hand: 3
+Wholesale Cost: 3.00
+Retail Cost: 13.00
+ISBN: 1
+Title: 1
+Author: 1
+Publisher: 1
+Date Added: 01/01/0001
+Quantity On Hand: 2
+Wholesale Cost: 1.11
+Retail Cost: 1.11

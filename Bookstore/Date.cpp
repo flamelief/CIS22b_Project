@@ -12,22 +12,6 @@ int Date::getMonth() const { return month; }
 void Date::setMonth(int m) { month = m; }
 int Date::getYear() const { return year; }
 void Date::setYear(int y) { year = y; }
-bool Date::isValid() {
-	if (year >= 0 && month >= Jan && month <= Dec){
-		if (day >= 1) {
-			if (month == Jan || month == Mar || month == May
-				|| month == Jul || month == Aug || month == Oct || month == Dec) {
-				return day <= 31;
-			}
-			else if (month == Feb) {
-				if (year % 4) return day <= 28;
-				else return day <= 29;
-			}
-			return day <= 30;
-		}
-	}
-	return false;
-}
 
 ostream& operator<<(ostream &output, const Date &D){
 	output << setfill('0') << setw(2) << D.month << "/" << setfill('0') << setw(2) << D.day << "/" << setfill('0') << setw(4) << D.year;

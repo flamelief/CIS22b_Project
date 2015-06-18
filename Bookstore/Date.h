@@ -22,7 +22,6 @@ public:
 	void setMonth(int m);
 	inline int getYear() const;
 	void setYear(int y);
-	bool isValid();
 
 	bool operator>(const Date&);
 	friend ostream& operator<<(ostream &output, const Date &D);

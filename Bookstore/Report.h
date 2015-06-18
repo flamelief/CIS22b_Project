@@ -9,7 +9,7 @@ mode, the result will be printed only.
 */
 
 namespace Sort {
-	enum Mode { Unsorted, Quantity, Date, Retail, Wholesale, RetailList, WholesaleList };
+	enum Mode { Unsorted = 1, Quantity, Date, Retail, Wholesale, RetailList, WholesaleList };
 }
 class Report : Interface{
 	Interface::books;
