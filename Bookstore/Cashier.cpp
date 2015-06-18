@@ -49,7 +49,7 @@ Book Cashier::decrementBookQuant(/*vector <Book> &b*/string id)
 {
 	int index;
 	Book dummy;
-	//char * tryAgain = "";
+	string tryAgain;
 	/*string userInput;
 	// Find which book to decrement by ISBN or Title
 	cout << "Book to purchase by ISBN or title:";
@@ -71,8 +71,13 @@ Book Cashier::decrementBookQuant(/*vector <Book> &b*/string id)
 	}
 	// Should include error testing in case the book is not found
 	//do {
-	cout << "For some reason, we could not find your book with the given information. We're sorry for the inconvenience." << endl;
-	return dummy;
+	cout << "For some reason, we could not find your book with the given information. Try entering it again or press 'q' to quit." << endl;
+	cin >> tryAgain;
+	if (tryAgain == "q")
+	{
+		return dummy;
+	}
+	return decrementBookQuant(tryAgain);
 	/*cin >> tryAgain;
 	if (*tryAgain = 'q')//isupper(*tryAgain) || isdigit(*tryAgain)
 	{
@@ -157,8 +162,8 @@ void Cashier::printCashierMenu(/*vector <Book> &b*/)
 		// increment pointer
 		boughtBooks++;
 		*/
-		cout << b.at(index).getQuant() << "     " << b.at(index).getISBN() << "\t\t" << b.at(index).getTitle()
-			<< b.at(index).getRetail() << "\t\t\t" << b.at(index).getTotal() << endl;
+		cout << b.at(index).getQuant() << "     " << b.at(index).getISBN() << "\t\t" << b.at(index).getTitle() << "\t\t\t"
+			<< b.at(index).getRetail() << "\t" << b.at(index).getTotal() << endl;
 		
 	}
 	// decrement pointer
@@ -169,9 +174,9 @@ void Cashier::printCashierMenu(/*vector <Book> &b*/)
 	}
 	*/
 	cout << "-------------------------------------------------------------------------------------" << endl << endl;
-	cout << "\t\t\t" << "Subtotal" << getTotal(amount, b/*boughtBooks*/) << endl;
-	cout << "\t\t\t" << "Tax" << TAX << endl;
-	cout << "\t\t\t" << "Total" << getTotal(amount, b/*boughtBooks*/) * TAX << endl << endl;
+	cout << "\t\t\t" << "Subtotal $" << getTotal(amount, b/*boughtBooks*/) << endl;
+	cout << "\t\t\t" << "Tax      $" << TAX << endl;
+	cout << "\t\t\t" << "Total    $" << getTotal(amount, b/*boughtBooks*/) * TAX << endl << endl;
 	cout << "Thank you for shopping at Team 1's Bookstore!" << endl;
 
 	// delete pointer
