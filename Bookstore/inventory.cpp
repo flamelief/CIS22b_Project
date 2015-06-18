@@ -1,7 +1,6 @@
 #include "Inventory.h"
-
+//vector of cooks
 vector<Book>::iterator Inventory::curBook;
-
 Inventory::Inventory(string filename) : Interface(filename)
 {
 	curBook = books.end();
@@ -14,7 +13,7 @@ Inventory::Inventory() {
 Inventory::~Inventory()
 {
 }
-
+// function to look up book
 bool Inventory::findBook(string titleISBN) {
 	for (curBook = books.begin(); curBook != books.end(); curBook++){
 		if (titleISBN == curBook->getTitle() || titleISBN == curBook->getISBN()) {
@@ -24,6 +23,7 @@ bool Inventory::findBook(string titleISBN) {
 	return false;
 }
 
+// function to delete book
 Book Inventory::deleteBook() {
 	Book b;
 	if (curBook != books.end()) {
@@ -32,7 +32,7 @@ Book Inventory::deleteBook() {
 	}
 	return b;
 }
-
+// function to cout book's data
 Book Inventory::getBook() {
 	Book b;
 	string s;
@@ -63,10 +63,12 @@ Book Inventory::getBook() {
 	return b;
 }
 
+// function to add book
 void Inventory::addBook() {
 	pushBook(getBook());
 }
 
+// function to edit book
 void Inventory::editBook(Edit::Mode mode, string input){
 	istringstream is(input);
 	string str;
