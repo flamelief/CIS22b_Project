@@ -3,8 +3,7 @@
 #include <iomanip>
 #include <string>
 #include "Report.h"
-#include "InventoryModule.h"
-#include "Interface.h"
+#include "Inventory.h"
 #include "Cashier.h"
 using namespace std;
 
@@ -26,16 +25,17 @@ void  printMain()
 // function for report menu display
 void printReportOptions()
 {
-	cout << "|================================|\n";
-	cout << "|    Serendipity Booksellers     |\n";
-	cout << "|             Reports            |\n";
-	cout << "|  1. Inventory Listing          |\n";
-	cout << "|  2. Inventory Wholesale Value  |\n";
-	cout << "|  3. Inventory Retail Value     |\n";
-	cout << "|  4. Listing by Quantity        |\n";
-	cout << "|  5. Listing by Cost            |\n";
-	cout << "|  6. Listing by Age             |\n";
-	cout << "|  7. Return to Main Menu        |\n";
+	cout << "|==================================|\n";
+	cout << "|    Serendipity Booksellers       |\n";
+	cout << "|             Reports              |\n";
+	cout << "|  1. Inventory Listing            |\n";
+	cout << "|  2. Listing by Quantity          |\n";
+	cout << "|  3. Listing by Age               |\n";
+	cout << "|  4. Inventory by Retail Value    |\n";
+	cout << "|  5. Inventory by Wholesale Value |\n";
+	cout << "|  6. Retail Value Listing         |\n";
+	cout << "|  7. Wholesale Value Listing      |\n";
+	cout << "|  8. Return to Main Menu          |\n";
 	cout << endl;
 	cout << "|  Enter Your Choice: ";
 }
@@ -67,8 +67,6 @@ void printInventoryModule()
 int main()
 {
 
-
-
 	//inline function
 	void printMain();
 	void printReportOptions();
@@ -83,8 +81,6 @@ int main()
 
 		tempOption = static_cast<int>(atoi(command.c_str()));
 
-
-
 		if ((tempOption< 1) || (tempOption> 4))
 		{
 			cout << "Invalid Input, Please enter a number between 1 and 4: ";
@@ -94,29 +90,29 @@ int main()
 		if (tempOption == 1){
 			cout << endl << endl;
 			//cashier module
-			Cashier menu("books2.txt");
-			menu.printCashierMenu();
+			//Cashier menu("books2.txt");
+			//menu.printCashierMenu();
 		}
-		#ifndef DEBUG
+		
 		else if (tempOption == 2){
 			cout << endl << endl;
 			printInventoryModule();
 			getline(cin, command);
 			int option = atoi(command.c_str());
-			//InventoryDatabaseModule* inv = new InventoryDatabaseModule();
+			Inventory* inv = new Inventory();
 			int tempOpt = 0;
 
-		/*	while ( tempOpt != 5 )
+			while ( tempOpt != 5 )
 			{
 				if (option == 1)
-					inv->lookUpBook();
+					inv->findBook();
 				else if (option == 2)
 					inv->addBook();
 				else if (option == 3)
 					inv->editBook();
 				else if (option == 4)
 					inv->deleteBook();
-				else if ( option == 5 ) */
+				else if ( option == 5 ) 
 				{
 					cout << "u r stupid";
 					break;
@@ -133,8 +129,9 @@ int main()
 			printReportOptions();
 			getline(cin, command);
 			int option = atoi(command.c_str());
-			Sort d = static_cast<Sort>(option);
-			r.printInventory(d);
+			if (option >= Sort::Unsorted && option <= Sort::WholesaleList) {
+				r.printInventory(static_cast<Sort::Mode>(option));
+			}
 		}
 		else if (tempOption == 4)
 		{

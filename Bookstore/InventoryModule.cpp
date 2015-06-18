@@ -1,4 +1,5 @@
-#ifndef DEBUG
+/*
+#ifndef REPORT_DRIVER
 #define _CRT_SECURE_NO_WARNINGS
 #include "InventoryModule.h"
 #include "Price.h"
@@ -297,4 +298,5 @@ void InventoryDatabaseModule::deleteBook()
 	}
 }
 
-#endif //DEBUG
+#endif //REPORT_DRIVER
+*/
