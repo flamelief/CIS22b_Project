@@ -36,7 +36,7 @@ Book Inventory::deleteBook() {
 Book Inventory::getBook() {
 	Book b;
 	string s;
-	Price p;
+	double p;
 	Date d;
 	int q;
 	cout << "ISBN: ";
@@ -70,7 +70,7 @@ void Inventory::addBook() {
 void Inventory::editBook(Edit::Mode mode, string input){
 	istringstream is(input);
 	string str;
-	Price p;
+	double p;
 	Date d;
 	int q;
 	switch (mode){

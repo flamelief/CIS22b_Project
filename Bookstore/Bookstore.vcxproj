@@ -96,7 +96,6 @@
     <ClCompile Include="ReportDriver.cpp" />
     <ClCompile Include="Interface.cpp" />
     <ClCompile Include="mainMenu.cpp" />
-    <ClCompile Include="Price.cpp" />
     <ClCompile Include="Report.cpp" />
     <ClCompile Include="Cashier.cpp" />
   </ItemGroup>
@@ -107,7 +106,6 @@
     <ClInclude Include="Cashier.h" />
     <ClInclude Include="Interface.h" />
     <ClInclude Include="Inventory.h" />
-    <ClInclude Include="Price.h" />
     <ClInclude Include="Report.h" />
   </ItemGroup>
   <ItemGroup>

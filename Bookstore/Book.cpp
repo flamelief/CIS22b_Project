@@ -16,11 +16,11 @@ string Book::getAuthor() const { return author; }
 void Book::setPub(string publisher) { this->publisher = publisher; }
 string Book::getPub() const { return publisher; }
 
-void Book::setWhole(Price wholesale) { this->wholesale = wholesale; }
-Price Book::getWhole() const { return wholesale; }
+void Book::setWhole(double wholesale) { this->wholesale = wholesale; }
+double Book::getWhole() const { return wholesale; }
 
-void Book::setRetail(Price retail) { this->retail = retail; }
-Price Book::getRetail() const { return retail; }
+void Book::setRetail(double retail) { this->retail = retail; }
+double Book::getRetail() const { return retail; }
 
 void Book::setQuant(int quantity) { this->quantity = quantity; }
 int Book::getQuant() const { return quantity; }
@@ -55,9 +55,11 @@ ostream& operator<<(ostream &output, const Book &B){
 	output << "Publisher: " << B.publisher << endl;
 	output << "Date Added: " << B.dateAdded << endl;
 	output << "Quantity On Hand: " << B.quantity << endl;
-	output << "Wholesale Cost: " << B.wholesale << endl;
-	output << "Retail Cost: " << B.retail;
+
+	output << "Wholesale Cost: " << fixed << setprecision(2) << B.wholesale << endl;
+	output << "Retail Cost: " << fixed << setprecision(2) << B.retail;
 	return output;
 }
+
 
 //bool compQuant(const Book &b1, const Book &b2) { return b1.getQuant() > b2.getQuant(); }

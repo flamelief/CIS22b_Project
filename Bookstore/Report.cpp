@@ -11,10 +11,10 @@ Report::Report()
 Report::~Report() {}
 
 void Report::printInventory(Sort::Mode mode){
-	Price(Book::*get)() const;
+	double(Book::*get)() const;
 	get = NULL;
 	bool sorted = this->mode == mode;
-	Price total;
+	double total;
 	this->mode = mode;
 	switch (mode){
 		case Sort::WholesaleList:

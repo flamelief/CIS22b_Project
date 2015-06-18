@@ -3,7 +3,6 @@
 #define CASHIER_H
 
 #include "Interface.h"
-#include "Price.h"
 
 /* Cashier class decrements the amount of particular book(s) in the interface vector, calculates the price of book(s) with tax, and
 displays the cashier menu
@@ -21,10 +20,11 @@ public:
 	//double getTax() const { return TAX; }
 	//void setSubtotal(Price s) { sales = s; }
 	//Price getSubtotal() const { return sales; }
-	Price getTotal(int, Book *); // Adds up the prices
-	Price getTotal(int, vector <Book>);
-	Book decrementBookQuant(/*vector <Book> &*/string); // Decrements the quantity of a book when it is purchased
-	void printCashierMenu(/*vector <Book> &*/); // Prompts user for books they wish to purchase and then prints them out with the total cost
+	//Price getTotal(int, Book *); 
+	double getTotalCost(int, vector <Book>); // Adds up the prices of multiple books
+	Book getBook(string);
+	void decrementBookQuant(/*vector <Book> &*/string); // Decrements the quantity of a book when it is purchased
+	void printCashierMenu(); // Prompts user for books they wish to purchase and then prints them out with the total cost
 										 
 };
 #endif

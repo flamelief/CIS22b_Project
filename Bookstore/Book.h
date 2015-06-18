@@ -6,7 +6,6 @@
 #define BOOKSTORE_BOOK_H
 
 #include "globals.h"
-#include "Price.h"
 #include "Date.h"
 #ifndef REPORT_DRIVER
 //#include "Cashier.h"
@@ -22,7 +21,8 @@ private:
 	string ISBN, title, author, publisher;
 	int quantity;
 public:
-	Price wholesale, retail;
+	//Price wholesale, retail;
+	double wholesale, retail;
 	Date dateAdded;
 	void setISBN(string ISBN);
 	string getISBN();
@@ -36,11 +36,11 @@ public:
 	void setPub(string publisher);
 	string getPub() const;
 
-	void setWhole(Price wholesale);
-	Price getWhole() const;
+	void setWhole(double wholesale);
+	double getWhole() const;
 
-	void setRetail(Price retail);
-	Price getRetail() const;
+	void setRetail(double retail);
+	double getRetail() const;
 
 	void setQuant(int quantity);
 	int getQuant() const;
@@ -48,8 +48,8 @@ public:
 	void setDate(Date dateAdded);
 	Date getDate() const;
 
-
-	Price getTotal() { return  retail * TAX; } // added here so that books can use this function
+	
+	double getTotal() { return  retail; } // added here so that books can use this function
 
 	friend istream& operator>>(istream &input, Book &B);
 	friend ostream& operator<<(ostream &output, const Book &B);
