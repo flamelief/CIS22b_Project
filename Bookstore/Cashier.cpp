@@ -1,3 +1,4 @@
+#define _CRT_SECURE_NO_WARNINGS
 #ifndef REPORT_DRIVER
 // Implementation for Cashier
 
@@ -12,7 +13,7 @@ using namespace std;
 
 Cashier::Cashier() : Interface() {}
 
-//Cashier::Cashier(string fileName) : Interface(fileName) {}
+Cashier::Cashier(string fileName) : Interface(fileName) {}
 
 Price Cashier::getTotal(int size, Book * b)
 {
@@ -58,7 +59,7 @@ Book Cashier::decrementBookQuant(/*vector <Book> &b*/string id)
 	// find the book with the right title by iterating through the vector (linear search)
 	for (index = 0; index < books.size(); index++)
 	{
-		if ((books.at(index).getTitle() == id) || (books.at(index).getISBN() == id))
+		if ((books.at(index).getTitle() == id) /*|| (books.at(index).getISBN() == id)*/)
 		{
 			if (books.at(index).getQuant() <= 0)
 			{
@@ -108,6 +109,8 @@ void Cashier::printCashierMenu(/*vector <Book> &b*/)
 	int amount = 0;
 	string purchase;
 	vector <Book> b;
+	time_t t = time(0);
+	struct tm * now = localtime(&t);
 
 	// establish which book(s) are being purchased, the book objects in the vector
 	// a loop type to get books
@@ -116,6 +119,7 @@ void Cashier::printCashierMenu(/*vector <Book> &b*/)
 	
 	cout << "How many books are you purchasing?" << endl;
 	cin >> amount;
+	cin.ignore();
 	/*=
 	cin.get();
 	Book * boughtBooks = new Book[amount];
@@ -129,8 +133,9 @@ void Cashier::printCashierMenu(/*vector <Book> &b*/)
 	*/
 	for (index = 0; index < amount; index++)
 	{
-		cout << "What book are you purchasing? Type either the ISBN or Title." << endl;
+		cout << "What book are you purchasing? Type in the Title." << endl;
 		getline(cin, purchase);
+
 		// add books from main vector into new vector for cashier purchases
 		b.push_back(decrementBookQuant(purchase));
 		//while (!islower(*temp))
@@ -150,9 +155,9 @@ void Cashier::printCashierMenu(/*vector <Book> &b*/)
 		//cout << "Would you like to purchase another book? Type either the ISBN or Title or 'q' to quit." << endl;
 	}
 	//} 
-	cout << "Team 1 Book Sellers" << endl << endl;
-	cout << "Date: " << time(0)/*change to make current time*/ << endl << endl;
-	cout << "Qty   " << "ISBN\t\t" << "Title\t\t\t" << "Price\t" << "Total" << endl;
+	cout << "\nTeam 1 Book Sellers" << endl << endl;
+	cout << "Date: " << (now->tm_mon + 1) << '/' << now->tm_mday << '/' << (now->tm_year + 1900) << endl << endl;
+	cout << "Qty   " << "ISBN\t\t" << setw(30) << left << "Title\t\t" << "Price\t" << "Total" << endl;
 	// Write out each book's information
 	for (index = 0; index < amount; index++)
 	{
@@ -162,9 +167,8 @@ void Cashier::printCashierMenu(/*vector <Book> &b*/)
 		// increment pointer
 		boughtBooks++;
 		*/
-		cout << b.at(index).getQuant() << "     " << b.at(index).getISBN() << "\t\t" << b.at(index).getTitle() << "\t\t\t"
-			<< b.at(index).getRetail() << "\t" << b.at(index).getTotal() << endl;
-		
+		cout << b.at(index).getQuant() << "     " << b.at(index).getISBN() << "\t" << setw(30) << left << b.at(index).getTitle()
+			<< "\t\t$" << b.at(index).getRetail() << "\t" << "$" << b.at(index).getTotal() << endl;
 	}
 	// decrement pointer
 	/*
@@ -175,8 +179,8 @@ void Cashier::printCashierMenu(/*vector <Book> &b*/)
 	*/
 	cout << "-------------------------------------------------------------------------------------" << endl << endl;
 	cout << "\t\t\t" << "Subtotal $" << getTotal(amount, b/*boughtBooks*/) << endl;
-	cout << "\t\t\t" << "Tax      $" << TAX << endl;
-	cout << "\t\t\t" << "Total    $" << getTotal(amount, b/*boughtBooks*/) * TAX << endl << endl;
+	cout << "\t\t\t" << "Tax      $" << getTotal(amount, b) * TAX << endl;
+	cout << "\t\t\t" << "Total    $" << getTotal(amount, b) + (getTotal(amount, b/*boughtBooks*/) * TAX) << endl << endl;
 	cout << "Thank you for shopping at Team 1's Bookstore!" << endl;
 
 	// delete pointer

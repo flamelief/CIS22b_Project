@@ -16,7 +16,7 @@ private:
 	//Price sales;
 public:
 	Cashier();
-	//Cashier(string);
+	Cashier(string);
 	// Make a function that adds up the totals of multiple books or a book array
 	//double getTax() const { return TAX; }
 	//void setSubtotal(Price s) { sales = s; }
