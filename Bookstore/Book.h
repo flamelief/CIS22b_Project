@@ -49,7 +49,7 @@ public:
 	Date getDate() const;
 
 
-	Price getTotal() { return retail + retail * TAX; } // added here so that books can use this function
+	Price getTotal() { return  retail * TAX; } // added here so that books can use this function
 
 	friend istream& operator>>(istream &input, Book &B);
 	friend ostream& operator<<(ostream &output, const Book &B);

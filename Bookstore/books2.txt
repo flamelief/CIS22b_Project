@@ -1,4 +1,4 @@
-ISBN: 
+ISBN: 1234567891234 
 Title: Wiggle Wort
 Author: Mumbo Jumbo
 Publisher: Bill Hart
@@ -6,8 +6,8 @@ Date Added: 01/01/0012
 Quantity On Hand: 234
 Wholesale Cost: 19.00
 Retail Cost: 20.00
-ISBN: 1234
-Title: w
+ISBN: 1112223334445
+Title: What 
 Author: nope
 Publisher: leslie
 Date Added: 01/01/0033
@@ -35,7 +35,7 @@ Title: The Forgotten Room
 Author: Lincoln Child
 Publisher: Knopf Doubleday Publishing Group
 Date Added: 05/28/2015
-Quantity On Hand: 6
+Quantity On Hand: 4
 Wholesale Cost: 11.00
 Retail Cost: 18.00
 ISBN: 9780316176538
@@ -67,7 +67,7 @@ Title: The Art of War
 Author: Sun Tzu
 Publisher: Filiquarian Publishing
 Date Added: 05/28/2015
-Quantity On Hand: 5
+Quantity On Hand: 3
 Wholesale Cost: 2.00
 Retail Cost: 4.00
 ISBN: 9780375725609
@@ -215,18 +215,10 @@ Quantity On Hand: 2
 Wholesale Cost: 17.00
 Retail Cost: 20.00
 ISBN: 123
-Title: Man Up
+Title: Real Talk
 Author: D'Angelo
-Publisher: R&B Records
-Date Added: 10/28/1991
-Quantity On Hand: 34
-Wholesale Cost: 12.00
-Retail Cost: 15.32
-ISBN: 1234
-Title: Wee Man
-Author: Wut
-Publisher: Wat
-Date Added: 01/02/1999
-Quantity On Hand: 32
-Wholesale Cost: 19.800
-Retail Cost: 6666.00
+Publisher: Who
+Date Added: 01/02/0003
+Quantity On Hand: 33
+Wholesale Cost: 19.99
+Retail Cost: 22.200
