@@ -5,7 +5,11 @@
 #include <iomanip>
 
 using namespace std;
-
+/*
+Simple date class used for specifying date.
+Mainly used to overload iostream input operators
+to read and write dates from file and user input.
+*/
 class Date
 {
 private:

@@ -1,6 +1,4 @@
-//
-// Created by Brandon Yost on 5/9/15.
-//
+#define _CRT_SECURE_NO_WARNINGS
 #include "Price.h"
 
 Price::Price(){

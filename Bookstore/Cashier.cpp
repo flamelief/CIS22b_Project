@@ -46,10 +46,10 @@ Price Cashier::getTotal(int size, vector <Book> b)
 	return total;
 }
 
-Book Cashier::decrementBookQuant(/*vector <Book> &b*/string id)
+int Cashier::decrementBookQuant(/*vector <Book> &b*/string id)
 {
 	int index;
-	Book dummy;
+	int dummy = -1;
 	string tryAgain;
 	/*string userInput;
 	// Find which book to decrement by ISBN or Title
@@ -59,7 +59,7 @@ Book Cashier::decrementBookQuant(/*vector <Book> &b*/string id)
 	// find the book with the right title by iterating through the vector (linear search)
 	for (index = 0; index < books.size(); index++)
 	{
-		if ((books.at(index).getTitle() == id) /*|| (books.at(index).getISBN() == id)*/)
+		if ((books.at(index).getTitle() == id) || (books.at(index).getISBN() == id))
 		{
 			if (books.at(index).getQuant() <= 0)
 			{
@@ -67,7 +67,7 @@ Book Cashier::decrementBookQuant(/*vector <Book> &b*/string id)
 				return dummy;
 			}
 			books.at(index).quantity -= 1;
-			return books.at(index);
+			return index;
 		}
 	}
 	// Should include error testing in case the book is not found
@@ -137,7 +137,10 @@ void Cashier::printCashierMenu(/*vector <Book> &b*/)
 		getline(cin, purchase);
 
 		// add books from main vector into new vector for cashier purchases
-		b.push_back(decrementBookQuant(purchase));
+		int idx = decrementBookQuant(purchase);
+		if (idx > 0){
+			b.push_back(books.at(idx));
+		}
 		//while (!islower(*temp))
 		//{
 		//if (isupper(*temp)) // Title branch
@@ -159,7 +162,7 @@ void Cashier::printCashierMenu(/*vector <Book> &b*/)
 	cout << "Date: " << (now->tm_mon + 1) << '/' << now->tm_mday << '/' << (now->tm_year + 1900) << endl << endl;
 	cout << "Qty   " << "ISBN\t\t" << setw(30) << left << "Title\t\t" << "Price\t" << "Total" << endl;
 	// Write out each book's information
-	for (index = 0; index < amount; index++)
+	for (index = 0; index < b.size(); index++)
 	{
 		/*
 		cout << setw(25) << boughtBooks->getQuant() << "  " << boughtBooks->getISBN() << "\t\t" << boughtBooks->getTitle() 
@@ -178,9 +181,9 @@ void Cashier::printCashierMenu(/*vector <Book> &b*/)
 	}
 	*/
 	cout << "-------------------------------------------------------------------------------------" << endl << endl;
-	cout << "\t\t\t" << "Subtotal $" << getTotal(amount, b/*boughtBooks*/) << endl;
-	cout << "\t\t\t" << "Tax      $" << getTotal(amount, b) * TAX << endl;
-	cout << "\t\t\t" << "Total    $" << getTotal(amount, b) + (getTotal(amount, b/*boughtBooks*/) * TAX) << endl << endl;
+	cout << "\t\t\t" << "Subtotal $" << getTotal(b.size(), b/*boughtBooks*/) << endl;
+	cout << "\t\t\t" << "Tax      $" << getTotal(b.size(), b) * TAX << endl;
+	cout << "\t\t\t" << "Total    $" << getTotal(b.size(), b) + (getTotal(amount, b/*boughtBooks*/) * TAX) << endl << endl;
 	cout << "Thank you for shopping at Team 1's Bookstore!" << endl;
 
 	// delete pointer

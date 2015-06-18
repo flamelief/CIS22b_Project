@@ -23,7 +23,7 @@ public:
 	//Price getSubtotal() const { return sales; }
 	Price getTotal(int, Book *); // Adds up the prices
 	Price getTotal(int, vector <Book>);
-	Book decrementBookQuant(/*vector <Book> &*/string); // Decrements the quantity of a book when it is purchased
+	int decrementBookQuant(/*vector <Book> &*/string); // Decrements the quantity of a book when it is purchased
 	void printCashierMenu(/*vector <Book> &*/); // Prompts user for books they wish to purchase and then prints them out with the total cost
 										 
 };

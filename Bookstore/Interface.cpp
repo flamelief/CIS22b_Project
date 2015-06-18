@@ -1,3 +1,4 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include "Interface.h"
 
 const int BOOKS_CAPACITY = 20;
