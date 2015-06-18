@@ -12,7 +12,7 @@ using namespace std;
 
 Cashier::Cashier() : Interface() {}
 
-Cashier::Cashier(string fileName) : Interface(fileName) {}
+//Cashier::Cashier(string fileName) : Interface(fileName) {}
 
 Price Cashier::getTotal(int size, Book * b)
 {
@@ -71,13 +71,13 @@ Book Cashier::decrementBookQuant(/*vector <Book> &b*/string id)
 	}
 	// Should include error testing in case the book is not found
 	//do {
-	cout << "For some reason, we could not find your book with the given information. Try entering it again or press 'q' to quit." << endl;
-	cin >> tryAgain;
-	if (tryAgain == "q")
-	{
+	cout << "For some reason, we could not find your book with the given information. Sorry for the inconvenience." << endl;
+	//cin >> tryAgain;
+	//if (tryAgain == "q")
+	//{
 		return dummy;
-	}
-	return decrementBookQuant(tryAgain);
+	//}
+	//return decrementBookQuant(tryAgain);
 	/*cin >> tryAgain;
 	if (*tryAgain = 'q')//isupper(*tryAgain) || isdigit(*tryAgain)
 	{
@@ -130,7 +130,7 @@ void Cashier::printCashierMenu(/*vector <Book> &b*/)
 	for (index = 0; index < amount; index++)
 	{
 		cout << "What book are you purchasing? Type either the ISBN or Title." << endl;
-		cin >> purchase;
+		getline(cin, purchase);
 		// add books from main vector into new vector for cashier purchases
 		b.push_back(decrementBookQuant(purchase));
 		//while (!islower(*temp))
