@@ -53,6 +53,7 @@ void printInventoryModule()
 
 }
 
+// function for inventory  found
 void printInventoryFound()
 {
 	cout << "|================================|\n";
@@ -65,7 +66,7 @@ void printInventoryFound()
 	cout << "|                                |\n";
 	cout << "|  Enter Your Choice: ";
 }
-
+//function for inventory edit
 void printInventoryEdit()
 {
 	cout << "|================================|\n";
@@ -109,19 +110,20 @@ int main()
 		getline(cin, command);
 
 		tempOption = static_cast<int>(atoi(command.c_str()));
-
+		// for invalid input numbers/choices
 		if ((tempOption< 1) || (tempOption> 4))
 		{
 			cout << "Invalid Input, Please enter a number between 1 and 4: ";
 			continue;
 		}
-
+		// option 1: cashier module and function call
 		if (tempOption == 1){
 			cout << endl << endl;
 			//cashier module
 			Cashier menu("books2.txt");
 			menu.printCashierMenu();
 		}
+		// option 2: call inventory module function 
 		else if (tempOption == 2){
 			cout << endl << endl;
 			printInventoryModule();
@@ -137,16 +139,19 @@ int main()
 					printInventoryFound();
 					getline(cin, command);
 					option = atoi(command.c_str());
+					// option to edit inventory
 					if (option == 1){
 						printInventoryEdit();
 						getline(cin, command);
 						option = atoi(command.c_str());
+
 						if (option >= Edit::ISBN && option <= Edit::Wholesale) {
 							cout << "\nEnter new book info: ";
 							getline(cin, s);
 							i.editBook(static_cast<Edit::Mode>(option), s);
 						}
 					}
+					//option to delete book
 					else if(option == 2){
 						i.deleteBook();
 						cout << "\nBook deleted\n\n";
@@ -154,6 +159,7 @@ int main()
 				}
 				else cout << "\n\nBook not found\n\n";
 			}
+			// option to add book
 			else if (option == 2){
 				cout << "\nEnter book to add: \n";
 				i.addBook();
@@ -162,6 +168,7 @@ int main()
 
 			
 		}
+		// option: report module
 		else if (tempOption == 3)
 		{
 			Report r("books3.txt");
