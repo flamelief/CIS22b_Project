@@ -133,6 +133,7 @@ int main()
 				string s;
 				getline(cin, s);
 				if (i.findBook(s)) {
+					cout <<i.getCurBook() << endl << endl;
 					printInventoryFound();
 					getline(cin, command);
 					option = atoi(command.c_str());
