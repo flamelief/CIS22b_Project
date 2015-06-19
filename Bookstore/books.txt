@@ -51,7 +51,7 @@ Title: The Art of War
 Author: Sun Tzu
 Publisher: Filiquarian Publishing
 Date Added: 05/28/2015
-Quantity On Hand: 5
+Quantity On Hand: 21
 Wholesale Cost: 2.00
 Retail Cost: 4.00
 ISBN: 9780375725609

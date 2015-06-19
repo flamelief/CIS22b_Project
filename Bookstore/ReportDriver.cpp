@@ -8,13 +8,11 @@ using namespace std;
 
 
 int main(){
-	//Report r("books2.txt");
-	//r.printInventory(Sort::Date);
-	Inventory i("books3.txt");
-	//i.addBook();
-	cout << i.findBook("Finders Keepers") << endl;
-	//i.deleteBook();
-	i.editBook(Edit::Publisher, "Something House");
+	Price p(100, 0), w(1, 1);
+	Book b;
+	b.setRetail(p);
+	w = w + (p);
+	cout << w << endl;
 	return 0;
 }
 #endif //REPORT_DRIVER

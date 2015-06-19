@@ -86,6 +86,12 @@ void printInventoryEdit()
 
 }
 
+int getOption(){
+	string option;
+	getline(cin, option);
+	return atoi(option.c_str());
+}
+
 /*Pseudo Code
 -Initialize all the modules
 -In a while loop, ask the user for which module they want to enter
@@ -94,22 +100,24 @@ void printInventoryEdit()
 - if they choose 3, then go inside Report Module
 - if they choose 4, then exit the program
 */
-int main()
+int main(int argc, char* argv[])
 {
 
 	//inline function
+	string filename = "books.txt";
+	if (argc == 2) {
+		filename = argv[1];
+	}
 	void printMain();
 	void printReportOptions();
 	void printInventoryModule();
 
 	int tempOption = 0;
-	string command = "";
+	string command;
 
 	do{
 		printMain();
-		getline(cin, command);
-
-		tempOption = static_cast<int>(atoi(command.c_str()));
+		tempOption = getOption();
 		// for invalid input numbers/choices
 		if ((tempOption< 1) || (tempOption> 4))
 		{
@@ -120,16 +128,14 @@ int main()
 		if (tempOption == 1){
 			cout << endl << endl;
 			//cashier module
-			Cashier menu("books2.txt");
-			menu.printCashierMenu();
+			Cashier menu(filename);
 		}
 		// option 2: call inventory module function 
 		else if (tempOption == 2){
 			cout << endl << endl;
 			printInventoryModule();
-			Inventory i("books2.txt");
-			getline(cin, command);
-			int option = atoi(command.c_str());
+			Inventory i(filename);
+			int option = getOption();
 			if (option == 1) { //Finding Book
 				cout << "\nEnter book to find: ";
 				string s;
@@ -137,13 +143,11 @@ int main()
 				if (i.findBook(s)) {
 					cout <<i.getCurBook() << endl << endl;
 					printInventoryFound();
-					getline(cin, command);
-					option = atoi(command.c_str());
+					option = getOption();
 					// option to edit inventory
 					if (option == 1){
 						printInventoryEdit();
-						getline(cin, command);
-						option = atoi(command.c_str());
+						option = getOption();
 
 						if (option >= Edit::ISBN && option <= Edit::Wholesale) {
 							cout << "\nEnter new book info: ";
@@ -171,11 +175,10 @@ int main()
 		// option: report module
 		else if (tempOption == 3)
 		{
-			Report r("books3.txt");
+			Report r(filename);
 			cout << endl << endl;
 			printReportOptions();
-			getline(cin, command);
-			int option = atoi(command.c_str());
+			int option = getOption();
 			if (option >= Sort::Unsorted && option <= Sort::WholesaleList) {
 				r.printInventory(static_cast<Sort::Mode>(option));
 				cout << endl;

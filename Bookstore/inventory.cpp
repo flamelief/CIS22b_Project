@@ -37,7 +37,7 @@ Book Inventory::deleteBook() {
 Book Inventory::getBook() {
 	Book b;
 	string s;
-	Price p;
+	double p;
 	Date d;
 	int q;
 	cout << "ISBN: ";
@@ -69,11 +69,13 @@ void Inventory::addBook() {
 	pushBook(getBook());
 }
 
+Book& Inventory::getCurBook() const { return *curBook; }
+
 // function to edit book
 void Inventory::editBook(Edit::Mode mode, string input){
 	istringstream is(input);
 	string str;
-	Price p;
+	double p = 0;
 	Date d;
 	int q;
 	switch (mode){
@@ -99,11 +101,11 @@ void Inventory::editBook(Edit::Mode mode, string input){
 		break;
 	case Edit::Retail:
 		is >> p;
-		curBook->setWhole(p);
+		curBook->setRetail(p);
 		break;
 	case Edit::Wholesale:
 		is >> p;
-		curBook->setRetail(p);
+		curBook->setWhole(p);
 		break;
 	}
 

@@ -16,13 +16,8 @@ public:
 	Inventory(string filename);
 	~Inventory();
 	void editBook(Edit::Mode, string);
-	//template <typename fT, typename valT>
-	//void editBook(fT f, valT val){
-	//	if (curBook != books.end()) {
-	//		((*curBook).*f)(val);
-	//	}
-	//}
 
+	Book& getCurBook() const;
 	bool findBook(string);
 	void addBook();
 	Book deleteBook();
