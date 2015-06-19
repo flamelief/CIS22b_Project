@@ -13,7 +13,7 @@ and printInventory.
 Specifies how Inventory information is displayed.
 */
 namespace Sort {
-	enum Mode { Unsorted = 1, Quantity, Date, Retail, Wholesale, RetailList, WholesaleList };
+	enum Mode { Unsorted=1, Quantity, Date, Retail, Wholesale, RetailList, WholesaleList };
 }
 
 class Report : Interface{

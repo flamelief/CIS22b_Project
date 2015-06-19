@@ -26,7 +26,6 @@ public:
 	bool findBook(string);
 	void addBook();
 	Book deleteBook();
-	Book getCurBook();
 	
 };
 

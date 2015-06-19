@@ -1,4 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS
+#ifdef DEBUG 
 #include <iostream>
 #include <iomanip>
 #include <string>
@@ -53,6 +53,7 @@ void printInventoryModule()
 
 }
 
+// function for inventory  found
 void printInventoryFound()
 {
 	cout << "|================================|\n";
@@ -65,7 +66,7 @@ void printInventoryFound()
 	cout << "|                                |\n";
 	cout << "|  Enter Your Choice: ";
 }
-
+//function for inventory edit
 void printInventoryEdit()
 {
 	cout << "|================================|\n";
@@ -85,12 +86,6 @@ void printInventoryEdit()
 
 }
 
-int getOption(){
-	string option;
-	getline(cin, option);
-	return atoi(option.c_str());
-}
-
 /*Pseudo Code
 -Initialize all the modules
 -In a while loop, ask the user for which module they want to enter
@@ -99,7 +94,7 @@ int getOption(){
 - if they choose 3, then go inside Report Module
 - if they choose 4, then exit the program
 */
-int main(int argc, char *argv[])
+int main()
 {
 
 	//inline function
@@ -108,38 +103,33 @@ int main(int argc, char *argv[])
 	void printInventoryModule();
 
 	int tempOption = 0;
-	string command;
-	string filename;
-	if (argc == 2){
-		filename = argv[1];
-	}
-	else filename = "books2.txt";
+	string command = "";
 
 	do{
 		printMain();
 		getline(cin, command);
 
 		tempOption = static_cast<int>(atoi(command.c_str()));
-
+		// for invalid input numbers/choices
 		if ((tempOption< 1) || (tempOption> 4))
 		{
 			cout << "Invalid Input, Please enter a number between 1 and 4: ";
 			continue;
 		}
-
+		// option 1: cashier module and function call
 		if (tempOption == 1){
 			cout << endl << endl;
 			//cashier module
-			Cashier menu(filename);
+			Cashier menu("books2.txt");
 			menu.printCashierMenu();
 		}
-
-		//Inventory Module
+		// option 2: call inventory module function 
 		else if (tempOption == 2){
 			cout << endl << endl;
 			printInventoryModule();
-			Inventory i(filename);
-			int option = getOption();
+			Inventory i("books2.txt");
+			getline(cin, command);
+			int option = atoi(command.c_str());
 			if (option == 1) { //Finding Book
 				cout << "\nEnter book to find: ";
 				string s;
@@ -147,34 +137,41 @@ int main(int argc, char *argv[])
 				if (i.findBook(s)) {
 					cout <<i.getCurBook() << endl << endl;
 					printInventoryFound();
-					option = getOption();
-					if (option == 1){ //editing book
+					getline(cin, command);
+					option = atoi(command.c_str());
+					// option to edit inventory
+					if (option == 1){
 						printInventoryEdit();
-						option = getOption();
-						if (option >= Edit::ISBN && option <= Edit::Wholesale) { //get which info to edit
+						getline(cin, command);
+						option = atoi(command.c_str());
+
+						if (option >= Edit::ISBN && option <= Edit::Wholesale) {
 							cout << "\nEnter new book info: ";
 							getline(cin, s);
 							i.editBook(static_cast<Edit::Mode>(option), s);
 						}
 					}
-					else if(option == 2){ //deleting book
+					//option to delete book
+					else if(option == 2){
 						i.deleteBook();
 						cout << "\nBook deleted\n\n";
 					}
 				}
 				else cout << "\n\nBook not found\n\n";
 			}
-			else if (option == 2){ // adding book
+			// option to add book
+			else if (option == 2){
 				cout << "\nEnter book to add: \n";
 				i.addBook();
 				cin.get();
 			}
-		}
 
-		//Report Module
+			
+		}
+		// option: report module
 		else if (tempOption == 3)
 		{
-			Report r(filename);
+			Report r("books3.txt");
 			cout << endl << endl;
 			printReportOptions();
 			getline(cin, command);
@@ -193,3 +190,4 @@ int main(int argc, char *argv[])
 	// exitc
 	return 0;
 }
+#endif //DEBUG
