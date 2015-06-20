@@ -153,6 +153,7 @@ int main(int argc, char* argv[])
 							cout << "\nEnter new book info: ";
 							getline(cin, s);
 							i.editBook(static_cast<Edit::Mode>(option), s);
+							cout << i.getCurBook() << endl << endl;
 						}
 					}
 					//option to delete book
