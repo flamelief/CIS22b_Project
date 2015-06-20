@@ -1,28 +1,49 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include "Book.h"
 
-void Book::setISBN(string ISBN) { this->ISBN = ISBN; }
+void Book::setISBN(string ISBN) { 
+	if (ISBN.empty()) throw InvalidISBN();
+	else this->ISBN = ISBN; 
+}
 string Book::getISBN() { return ISBN; }
 
-void Book::setTitle(string title) { this->title = title; }
+void Book::setTitle(string title) {
+	if (title.empty()) throw InvalidTitle();
+	else this->title = title; }
 string Book::getTitle() { return title; }
 
-void Book::setAuthor(string author) { this->author = author; }
+void Book::setAuthor(string author) {
+	if (author.empty()) throw InvalidAuthor();
+	else this->author = author;
+}
 string Book::getAuthor() const { return author; }
 
-void Book::setPub(string publisher) { this->publisher = publisher; }
+void Book::setPub(string publisher) {
+	if (publisher.empty()) throw InvalidPublisher();
+	else this->publisher = publisher;
+}
 string Book::getPub() const { return publisher; }
 
-void Book::setWhole(double wholesale) { this->wholesale = wholesale; }
+void Book::setWhole(double wholesale) { 
+	if (wholesale < 0) throw InvalidPrice();
+	else this->wholesale = wholesale; }
 double Book::getWhole() const { return wholesale; }
 
-void Book::setRetail(double retail) { this->retail = retail; }
+void Book::setRetail(double retail) {
+	if (retail < 0) throw InvalidPrice();
+	else this->retail = retail; }
 double Book::getRetail() const { return retail; }
 
-void Book::setQuant(int quantity) { this->quantity = quantity; }
+void Book::setQuant(int quantity) {
+	if (quantity < 0) throw InvalidQuantity();
+	else this->quantity = quantity;
+}
 int Book::getQuant() const { return quantity; }
 
-void Book::setDate(Date d) { dateAdded = d; }
+void Book::setDate(Date d) { 
+	if (!d.isValid()) throw InvalidDate();
+	else dateAdded = d;
+}
 Date Book::getDate() const { return dateAdded; }
 
 istream& operator>>(istream &input, Book &B){
@@ -56,4 +77,32 @@ ostream& operator<<(ostream &output, const Book &B){
 	output << "Wholesale Cost: " << fixed << setprecision(2) << B.wholesale << endl;
 	output << "Retail Cost: " << fixed << setprecision(2) << B.retail;
 	return output;
+}
+
+const char* InvalidPrice::what() const {
+	return "Invalid price entered";
+}
+
+const char* InvalidDate::what() const {
+	return "Invalid date entered";
+}
+
+const char* InvalidISBN::what() const {
+	return "Empty ISBN field not allowed";
+}
+
+const char* InvalidTitle::what() const {
+	return "Empty title field not allowed";
+}
+
+const char* InvalidAuthor::what() const {
+	return "Empty author field not allowed";
+}
+
+const char* InvalidPublisher::what() const {
+	return "Empty publisher field not allowed";
+}
+
+const char* InvalidQuantity::what() const {
+	return "Invalid quantity entered";
 }

@@ -19,7 +19,7 @@ private:
 	};
 	int day, month, year;
 public:
-	Date(int day = 1, int month = 1, int year = 1990);
+	Date(int day = 1, int month = 1, int year = 1900);
 	inline int getDay() const;
 	void setDay(int d);
 	inline int getMonth() const;

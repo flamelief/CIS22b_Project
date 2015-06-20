@@ -13,6 +13,7 @@ class Interface
 {
 	static string fileName;
 public:
+	~Interface();
 protected:
 	/*
 	Opens file and reads books to static Book vector.
@@ -21,7 +22,6 @@ protected:
 	*/
 	Interface();
 	Interface(string fileName);
-	~Interface();
 	/*
 	Adds book to vector, doubling the size of vector if vector is full.
 	*/

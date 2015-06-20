@@ -60,13 +60,27 @@ Book Inventory::getBook() {
 	b.setWhole(p);
 	cout << "Retail cost: ", cin >> p;
 	b.setRetail(p);
-
+	cin.get();
 	return b;
 }
 
 // function to add book
 void Inventory::addBook() {
-	pushBook(getBook());
+	try{
+		Book temp = getBook();
+		for (vector<Book>::iterator it = books.begin(); it != books.end(); it++){
+			//Allow for duplicate titles but not ISBN's
+			if (it->getISBN() == temp.getISBN()) {
+				cout << "\nBook already in library\n\n";
+				return;
+			}
+		}
+		pushBook(temp);
+		cout << "\nAdded book:\n\n" << temp << endl << endl;
+	}
+	catch (exception &e){
+		cout << endl << e.what() << endl << endl;
+	}
 }
 
 Book& Inventory::getCurBook() const { return *curBook; }
@@ -78,35 +92,40 @@ void Inventory::editBook(Edit::Mode mode, string input){
 	double p = 0;
 	Date d;
 	int q;
-	switch (mode){
-	case Edit::ISBN:
-		curBook->setISBN(input);
-		break;
-	case Edit::Title:
-		curBook->setTitle(input);
-		break;
-	case Edit::Author:
-		curBook->setAuthor(input);
-		break;
-	case Edit::Publisher:
-		curBook->setPub(input);
-		break;
-	case Edit::Date:
-		is >> d;
-		curBook->setDate(d);
-		break;
-	case Edit::Quantity:
-		q = atoi(input.c_str());
-		curBook->setQuant(q);
-		break;
-	case Edit::Retail:
-		is >> p;
-		curBook->setRetail(p);
-		break;
-	case Edit::Wholesale:
-		is >> p;
-		curBook->setWhole(p);
-		break;
+	try{
+		switch (mode){
+		case Edit::ISBN:
+			curBook->setISBN(input);
+			break;
+		case Edit::Title:
+			curBook->setTitle(input);
+			break;
+		case Edit::Author:
+			curBook->setAuthor(input);
+			break;
+		case Edit::Publisher:
+			curBook->setPub(input);
+			break;
+		case Edit::Date:
+			is >> d;
+			curBook->setDate(d);
+			break;
+		case Edit::Quantity:
+			q = atoi(input.c_str());
+			curBook->setQuant(q);
+			break;
+		case Edit::Retail:
+			is >> p;
+			curBook->setRetail(p);
+			break;
+		case Edit::Wholesale:
+			is >> p;
+			curBook->setWhole(p);
+			break;
+		}
+	}
+	catch(exception& e){
+		cout << endl << e.what() << endl << endl;
 	}
 
 }

@@ -20,7 +20,7 @@ Cashier::Cashier(string fileName) : Interface(fileName) {
 double Cashier::getTotalCost(vector <Book> b)
 {
 	double total = 0;
-	int index;
+	uint index;
 
 	for (index = 0; index < b.size(); index++)
 	{
@@ -31,7 +31,7 @@ double Cashier::getTotalCost(vector <Book> b)
 
 int Cashier::getBook(string id)
 {
-	int index;
+	uint index;
 
 	// find the book with the right title by iterating through the vector (linear search)
 	for (index = 0; index < books.size(); index++)

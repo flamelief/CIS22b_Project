@@ -6,9 +6,10 @@ namespace Edit {
 	enum  Mode { ISBN = 1, Title, Author, Publisher, Date, Quantity, Retail, Wholesale };
 }
 
-class Inventory :
-	private Interface
+class Inventory : private Interface
 {
+	Inventory(const Inventory&);
+	Inventory& operator=(Inventory&);
 	Book getBook();
 	static std::vector<Book>::iterator curBook;
 public:

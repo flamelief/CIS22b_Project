@@ -16,7 +16,9 @@ namespace Sort {
 	enum Mode { Unsorted=1, Quantity, Date, Retail, Wholesale, RetailList, WholesaleList };
 }
 
-class Report : Interface{
+class Report : private Interface{
+	Report(const Report&);
+	Report& operator=(Report&);
 	Interface::books;
 	Sort::Mode mode;
 	template <typename fT>

@@ -1,4 +1,4 @@
-#ifdef DEBUG 
+#define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <iomanip>
 #include <string>
@@ -167,7 +167,6 @@ int main(int argc, char* argv[])
 			else if (option == 2){
 				cout << "\nEnter book to add: \n";
 				i.addBook();
-				cin.get();
 			}
 
 			
@@ -193,4 +192,3 @@ int main(int argc, char* argv[])
 	// exitc
 	return 0;
 }
-#endif //DEBUG

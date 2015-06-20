@@ -12,12 +12,13 @@
 using namespace std;
 
 class Book {
+	friend class Cashier;
 private:
 	string ISBN, title, author, publisher;
 	Date dateAdded;
-public:
 	double wholesale, retail;
 	int quantity;
+public:
 	void setISBN(string ISBN);
 	string getISBN();
 
@@ -48,5 +49,40 @@ public:
 	friend istream& operator>>(istream &input, Book &B);
 	friend ostream& operator<<(ostream &output, const Book &B);
 };
-#endif //BOOKSTORE_BOOK_H
 
+class InvalidPrice : public exception
+{
+	virtual  const char* what() const throw();
+};
+
+class InvalidDate : public exception
+{
+	virtual  const char* what() const throw();
+};
+
+class InvalidISBN : public exception
+{
+	virtual  const char* what() const throw();
+};
+
+class InvalidTitle : public exception
+{
+	virtual  const char* what() const throw();
+};
+
+class InvalidAuthor : public exception
+{
+	virtual  const char* what() const throw();
+};
+
+class InvalidPublisher : public exception
+{
+	virtual  const char* what() const throw();
+};
+
+class InvalidQuantity : public exception
+{
+	virtual  const char* what() const throw();
+};
+
+#endif //BOOKSTORE_BOOK_H
